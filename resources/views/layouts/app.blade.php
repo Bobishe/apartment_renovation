@@ -47,7 +47,7 @@
             <div class="row align-items-center">
                 <div class="col-md-3">
                     <a href="/" class="logo">
-                        <img src="{{ asset('path/to/logo.png') }}" alt="Логотип">
+                        <img src="{{ asset('img/logo.png') }}" alt="Логотип">
                     </a>
                 </div>
                 <div class="col-md-6 text-center">

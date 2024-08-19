@@ -17,6 +17,10 @@ use App\Models\Page;
 
 require __DIR__ . '/auth.php';
 
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
+
 
 Route::get('/{slug}', function ($slug) {
     // Найдите страницу по ее slug (уникальному URL)
@@ -24,10 +28,4 @@ Route::get('/{slug}', function ($slug) {
 
     // Верните представление и передайте в него данные страницы
     return view('page', compact('page'));
-});
-
-
-
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
 });
