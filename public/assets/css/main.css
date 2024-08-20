@@ -1,0 +1,190 @@
+.header {
+    background-color: rgba(51, 51, 51, 1);
+    /* Цвет фона #333 с 50% прозрачностью */
+    padding: 15px 0;
+    color: white;
+}
+
+.header .logo img {
+    max-height: 70px;
+}
+
+.header .nav-link {
+    color: white;
+}
+
+.header .nav-link:hover {
+    color: #ddd;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar {
+    background-color: rgba(51, 51, 51, 0.8);
+    position: -webkit-sticky; /* Для Safari */
+    position: sticky;
+    top: 0; /* Прилипает к верху при достижении верхней части экрана */
+    z-index: 1000; /* Убедитесь, что навбар находится поверх других элементов */
+}
+
+/* подчеркивание у меню */
+.navbar-nav .nav-link {
+    position: relative; /* Для позиционирования псевдоэлемента */
+    transition: color 0.3s; /* Плавное изменение цвета текста */
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px; /* Отступ от нижней части ссылки */
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left center; /* Начало анимации слева */
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.dropdown-menu {
+    visibility: hidden; /* Скрыть, но сохранить в потоке */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+    position: absolute; /* Позиционирование выпадающего списка */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    visibility: visible; /* Сделать видимым при наведении */
+    opacity: 1;
+}
+
+.nav-item.dropdown:hover .nav-link::after {
+    transform: scaleX(0); /* Убрать подчеркивание при наведении на dropdown */
+}
+
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ddd;
+}
+
+/* Стили для dropdown */
+.dropdown-menu {
+    background-color: #727272; /* Цвет фона подменю */
+    border: none;
+}
+
+.dropdown-item {
+    color: #fff;
+}
+
+.dropdown-item:hover {
+    background-color: #565656; /* Цвет при наведении на подменю */
+    color: white;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+  
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    display: none;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu:hover > a:after {
+    border-left-color: #fff;
+}
+
+
+/* Адаптивные стили для экранов меньше чем lg */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        max-height: 75vh; /* Ограничиваем высоту на 75% от высоты окна */
+        overflow-y: auto; /* Включаем вертикальную прокрутку */
+    }
+
+    /* Ограничение высоты для длинных выпадающих списков */
+    .dropdown-menu {
+        max-height: 75vh; /* Ограничиваем высоту на 50% от высоты окна */
+        overflow-y: auto; /* Включаем вертикальную прокрутку внутри выпадающего меню */
+    }
+
+    .navbar-nav {
+        display: block;
+        width: 100%;
+
+    }
+
+    .navbar-nav .nav-item {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #626262; /* Линия между пунктами меню */
+    }
+
+    .navbar-nav .nav-link {
+        display: block;
+        width: 100%;
+        padding: 10px 15px;
+        color: #fff; /* Цвет текста */
+        text-align: left;
+    }
+
+    .navbar-nav .nav-link::after {
+        content: "▾"; /* Добавляем стрелочку вниз */
+        float: right;
+    }
+
+    .dropdown-menu {
+        position: static;
+        float: none;
+        width: 100%;
+        box-shadow: none;
+        
+    }
+
+    .dropdown-menu .dropdown-item {
+        color: #fff;
+        padding-left: 30px; /* Отступ для подменю */
+    }
+
+    .dropdown-submenu .dropdown-menu {
+        left: 100%;
+        top: 0;
+        margin-top: 0;
+       
+    }
+
+    .dropdown-submenu .dropdown-item {
+        padding-left: 45px; /* Больше отступа для второго уровня подменю */
+    }
+}

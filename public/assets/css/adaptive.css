@@ -1,0 +1,60 @@
+/* Базовый размер шрифта на маленьких экранах */
+.fs-dynamic {
+    font-size: 2rem; /* Основной размер шрифта, эквивалент fs-1 */
+}
+
+/* Дополнительный класс для второго абзаца */
+.fs-extra {
+    font-size: 1.25rem; /* Основной размер шрифта, эквивалент fs-4 */
+}
+
+.background-fixed {
+    position: absolute;
+    left: 0;
+    top: 60vh;
+    width: 100%;
+    height: 100vh; /* Высота на весь экран */
+    background-position: center center; /* Центрирование изображения */
+    background-size: cover; /* Покрытие всего доступного пространства */
+    background-attachment: fixed; /* Фиксация фона */
+    z-index: -1;
+}
+
+@media (min-width: 991.98px) {
+    .header {
+        background-color: rgba(51, 51, 51, 0.8)!important;
+        /* Цвет фона #333 с 50% прозрачностью */
+        padding: 15px 0;
+        color: white;
+    }
+
+    .background-fixed {
+    position: absolute;
+    left: 0;
+    top: 0vh!important;
+}
+
+    .fs-dynamic {
+        font-size: 1.6rem; /* Размер, приближенный к fs-4 */
+    }
+
+    .fs-extra {
+        font-size: 1.2rem; /* Размер, приближенный к fs-5 */
+    }
+
+    .fs-lg-5 {
+        font-size: 1.3rem; /* Размер, приближенный к fs-5 */
+    }
+
+    .background-fixed {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh; /* Высота на весь экран */
+        background-position: center center; /* Центрирование изображения */
+        background-size: cover; /* Покрытие всего доступного пространства */
+        background-attachment: fixed; /* Фиксация фона */
+        z-index: -1;
+    }
+}
