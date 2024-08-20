@@ -102,7 +102,6 @@
     top: 0;
     left: 100%;
     margin-top: -1px;
-  
 }
 
 .dropdown-submenu {
@@ -125,7 +124,6 @@
     border-left-color: #fff;
 }
 
-
 /* Адаптивные стили для экранов меньше чем lg */
 @media (max-width: 991.98px) {
     .navbar-collapse {
@@ -142,7 +140,6 @@
     .navbar-nav {
         display: block;
         width: 100%;
-
     }
 
     .navbar-nav .nav-item {
@@ -169,7 +166,6 @@
         float: none;
         width: 100%;
         box-shadow: none;
-        
     }
 
     .dropdown-menu .dropdown-item {
@@ -181,10 +177,95 @@
         left: 100%;
         top: 0;
         margin-top: 0;
-       
     }
 
     .dropdown-submenu .dropdown-item {
         padding-left: 45px; /* Больше отступа для второго уровня подменю */
     }
+}
+
+/* пульсирующая кнопка  */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 156, 96, 0.7);
+    }
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px 20px rgba(0, 255, 159, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 255, 159, 0);
+    }
+}
+
+.pulsing-btn {
+    animation: pulse 2s infinite;
+    background-color: #008653;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: none;
+}
+
+/* пульсирующий текст  */
+@keyframes pulse-text {
+    0% {
+        transform: scale(1);
+        color: #d9534f;
+    }
+    50% {
+        transform: scale(1.05);
+        color: #ff6f61;
+    }
+    100% {
+        transform: scale(1);
+        color: #d9534f;
+    }
+}
+
+.pulsing-text {
+    animation: pulse-text 2s infinite;
+}
+
+.modern-box {
+    border: 1px solid #1c794e;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modern-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.text-primary {
+    color: #d9534f !important;
+}
+
+.text-danger {
+    color: #d9534f !important;
+}
+
+h2.text-primary {
+    font-size: 2rem;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a.text-primary {
+    text-decoration: none;
+    border-bottom: 2px solid rgba(25, 132, 82 0.3);
+    transition: border-bottom 0.3s ease;
+}
+
+a.text-primary:hover {
+    border-bottom: 2px solid #d9534f;
 }

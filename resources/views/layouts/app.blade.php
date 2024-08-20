@@ -37,18 +37,19 @@
                 </div>
                 <div class="col-lg-3 text-right mt-3  mb-3 mb-lg-0">
                     <!-- Социальные иконки -->
-                    <a href="#" class="mr-2 bi bi-whatsapp p-1 text-bg-success"
+                    <a href="https://wa.me/79029238226?text=" class="mr-2 bi bi-whatsapp p-1 text-bg-success"
                         style="font-size: 1.3rem; color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;"></a>
-                    <a href="#" class="mr-2 bi bi-telegram p-1 text-bg-success"
+                    <a href="https://tlgg.ru/remont_kvartir_24" class="mr-2 bi bi-telegram p-1 text-bg-success"
                         style="font-size: 1.3rem; color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;"></a>
-                    <a href="#" class="mr-2 p-1 text-bg-success"
+                    <a href="https://ok.ru/group/60443121877243" class="mr-2 p-1 text-bg-success"
                         style="border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;">
                         <img src="{{ asset('img/svg/odnoklassniki-svgrepo-com.svg') }}" alt="Odnoklassniki"
                             style="width: 1.3rem; height: 1.3rem; color: white;">
                     </a>
-                    <a href="#" class="mr-2 bi bi bi-youtube p-1 text-bg-success"
+                    <a href="https://www.youtube.com/channel/UC4-n2VGT67KX92gBBsPtMSA"
+                        class="mr-2 bi bi bi-youtube p-1 text-bg-success"
                         style="font-size: 1.3rem; color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;"></a>
-                    <a href="#" class="mr-2 p-1 text-bg-success"
+                    <a href="https://vk.com/remontkvartirkrasnoyarsk124" class="mr-2 p-1 text-bg-success"
                         style="border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;">
                         <img src="{{ asset('img/svg/vk-svgrepo-com.svg') }}" alt="vk"
                             style="width: 1.5rem; height: 1.3rem; color: white;">
@@ -70,8 +71,9 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid">
-            <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 <span class="navbar-text ms-2 fs-4 " style="vertical-align: middle; color: white">МЕНЮ САЙТА</span>
             </button>
@@ -133,7 +135,7 @@
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle fs-lg-5" >Виды ремонта</a>
+                                <a class="dropdown-item dropdown-toggle fs-lg-5">Виды ремонта</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item fs-lg-5" href="#">Дизайнерский ремонт</a></li>
                                     <li><a class="dropdown-item fs-lg-5" href="#">Ремонт под ключ</a></li>
@@ -149,7 +151,7 @@
                                 <a class="dropdown-item dropdown-toggle fs-lg-5">Услуги по ремонту</a>
                                 <ul class="dropdown-menu">
                                     <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle fs-lg-5" >Стены</a>
+                                        <a class="dropdown-item dropdown-toggle fs-lg-5">Стены</a>
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item fs-lg-5" href="#">Штукатурка стен</a>
                                             </li>
@@ -157,7 +159,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle fs-lg-5" >Ремонт
+                                        <a class="dropdown-item dropdown-toggle fs-lg-5">Ремонт
                                             пола</a>
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item fs-lg-5" href="#">Укладка ламината</a>
@@ -184,7 +186,7 @@
                             <li><a class="dropdown-item fs-lg-5" href="/team">Вопрос ответ</a></li>
                         </ul>
                     </li>
-                  
+
                     <li class="nav-item">
                         <a class="nav-link" href="/photo-reports">Контакты</a>
                     </li>

@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\Page;
+use App\Models\Work;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +27,15 @@ Route::get('/{slug}', function ($slug) {
     // Найдите страницу по ее slug (уникальному URL)
     $page = Page::where('slug', $slug)->firstOrFail();
 
-    // Верните представление и передайте в него данные страницы
-    return view('page', compact('page'));
+    // Инициализируем переменную для работ
+    $works = null;
+
+    // Проверяем slug
+    if ($slug == 'index') {
+        // Если slug равен 'home' или 'index', получаем последние три работы
+        $works = Work::latest()->take(3)->get();
+    }
+
+    // Возвращаем представление и передаем данные страницы и, если есть, работы
+    return view('page', compact('page', 'works'));
 });

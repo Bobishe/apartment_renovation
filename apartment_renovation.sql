@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Авг 19 2024 г., 17:43
+-- Время создания: Авг 20 2024 г., 16:42
 -- Версия сервера: 10.4.32-MariaDB
 -- Версия PHP: 8.1.25
 
@@ -126,7 +126,15 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (52, 6, 'status', 'select_dropdown', 'Status', 1, 1, 1, 1, 1, 1, '{\"default\":\"INACTIVE\",\"options\":{\"INACTIVE\":\"INACTIVE\",\"ACTIVE\":\"ACTIVE\"}}', 9),
 (53, 6, 'created_at', 'timestamp', 'Created At', 1, 1, 1, 0, 0, 0, NULL, 10),
 (54, 6, 'updated_at', 'timestamp', 'Updated At', 1, 0, 0, 0, 0, 0, NULL, 11),
-(55, 6, 'image', 'image', 'Page Image', 0, 1, 1, 1, 1, 1, NULL, 12);
+(55, 6, 'image', 'image', 'Page Image', 0, 1, 1, 1, 1, 1, NULL, 12),
+(56, 11, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(57, 11, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{}', 2),
+(58, 11, 'description', 'text', 'Description', 1, 1, 1, 1, 1, 1, '{}', 3),
+(59, 11, 'image', 'image', 'Image', 1, 1, 1, 1, 1, 1, '{}', 4),
+(60, 11, 'address', 'text', 'Address', 1, 1, 1, 1, 1, 1, '{}', 5),
+(61, 11, 'area', 'text', 'Area', 1, 1, 1, 1, 1, 1, '{}', 6),
+(62, 11, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 7),
+(63, 11, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8);
 
 -- --------------------------------------------------------
 
@@ -162,7 +170,8 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2024-08-19 07:21:26', '2024-08-19 07:21:26'),
 (4, 'categories', 'categories', 'Category', 'Categories', 'voyager-categories', 'TCG\\Voyager\\Models\\Category', NULL, '', '', 1, 0, NULL, '2024-08-19 07:21:39', '2024-08-19 07:21:39'),
 (5, 'posts', 'posts', 'Post', 'Posts', 'voyager-news', 'TCG\\Voyager\\Models\\Post', 'TCG\\Voyager\\Policies\\PostPolicy', '', '', 1, 0, NULL, '2024-08-19 07:21:39', '2024-08-19 07:21:39'),
-(6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, '', '', 1, 0, NULL, '2024-08-19 07:21:40', '2024-08-19 07:21:40');
+(6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, '', '', 1, 0, NULL, '2024-08-19 07:21:40', '2024-08-19 07:21:40'),
+(11, 'works', 'works', 'Work', 'Works', NULL, 'App\\Models\\Work', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2024-08-20 06:35:28', '2024-08-20 06:52:41');
 
 -- --------------------------------------------------------
 
@@ -239,7 +248,8 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 14, '2024-08-19 07:21:26', '2024-08-19 07:21:26', 'voyager.settings.index', NULL),
 (11, 1, 'Categories', '', '_self', 'voyager-categories', NULL, NULL, 8, '2024-08-19 07:21:39', '2024-08-19 07:21:39', 'voyager.categories.index', NULL),
 (12, 1, 'Posts', '', '_self', 'voyager-news', NULL, NULL, 6, '2024-08-19 07:21:40', '2024-08-19 07:21:40', 'voyager.posts.index', NULL),
-(13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 7, '2024-08-19 07:21:40', '2024-08-19 07:21:40', 'voyager.pages.index', NULL);
+(13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 7, '2024-08-19 07:21:40', '2024-08-19 07:21:40', 'voyager.pages.index', NULL),
+(14, 1, 'Works', '', '_self', NULL, NULL, NULL, 15, '2024-08-20 06:35:28', '2024-08-20 06:35:28', 'voyager.works.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -285,7 +295,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (25, '2016_01_01_000000_create_pages_table', 2),
 (26, '2016_01_01_000000_create_posts_table', 2),
 (27, '2016_02_15_204651_create_categories_table', 2),
-(28, '2017_04_11_000000_alter_post_nullable_fields_table', 2);
+(28, '2017_04_11_000000_alter_post_nullable_fields_table', 2),
+(29, '2024_08_20_133119_create_works_table', 3);
 
 -- --------------------------------------------------------
 
@@ -313,7 +324,7 @@ CREATE TABLE `pages` (
 --
 
 INSERT INTO `pages` (`id`, `author_id`, `title`, `excerpt`, `body`, `image`, `slug`, `meta_description`, `meta_keywords`, `status`, `created_at`, `updated_at`) VALUES
-(1, 0, 'Hello World', 'Hang the jib grog grog blossom grapple dance the hempen jig gangway pressgang bilge rat to go on account lugger. Nelsons folly gabion line draught scallywag fire ship gaff fluke fathom case shot. Sea Legs bilge rat sloop matey gabion long clothes run a shot across the bow Gold Road cog league.', '<p>Hello World. Scallywag grog swab Cat o\'nine tails scuttle rigging hardtack cable nipper Yellow Jack. Handsomely spirits knave lad killick landlubber or just lubber deadlights chantey pinnace crack Jennys tea cup. Provost long clothes black spot Yellow Jack bilged on her anchor league lateen sail case shot lee tackle.</p>\n<p>Ballast spirits fluke topmast me quarterdeck schooner landlubber or just lubber gabion belaying pin. Pinnace stern galleon starboard warp carouser to go on account dance the hempen jig jolly boat measured fer yer chains. Man-of-war fire in the hole nipperkin handsomely doubloon barkadeer Brethren of the Coast gibbet driver squiffy.</p>', 'pages/page1.jpg', 'index', 'Yar Meta Description', 'Keyword1, Keyword2', 'ACTIVE', '2024-08-19 07:21:40', '2024-08-19 07:21:40');
+(1, 2, 'index', 'Hang the jib grog grog blossom grapple dance the hempen jig gangway pressgang bilge rat to go on account lugger. Nelsons folly gabion line draught scallywag fire ship gaff fluke fathom case shot. Sea Legs bilge rat sloop matey gabion long clothes run a shot across the bow Gold Road cog league.', '<div class=\" position-relative text-center d-flex align-items-center justify-content-center\" style=\"height: 50vh;\">\r\n<div class=\"overlay-content\">\r\n<h1 class=\"text-white fw-bold\">ПРОИЗВОДИМ РЕМОНТ КВАРТИР В КРАСНОЯРСКЕ</h1>\r\n<div class=\"d-flex flex-wrap justify-content-center mt-4\"><a class=\"fs-lg-5 btn btn-success m-2 fw-bolder\">Ремонт квартир под ключ</a> <a class=\"btn btn-success m-2 fw-bolder fs-lg-5\">Дизайн интерьера</a> <a class=\"btn btn-success m-2 fw-bolder fs-lg-5\">Комплектация материалами</a> <a class=\"btn btn-success m-2 fw-bolder fs-lg-5\">Внутренняя отделка домов и коттеджей</a> <a class=\"btn btn-success m-2 fw-bolder fs-lg-5\">Гарантия на ремонт 24 месяца</a></div>\r\n<a class=\"btn btn-success mt-5 pulsing-btn\" href=\"#\">Заказать ремонт</a></div>\r\n</div>\r\n<div class=\"row justify-content-center my-mt-5\">\r\n<div class=\"col-md-4\">\r\n<div class=\"discount-card text-center position-relative\">\r\n<figure class=\"image\"><img class=\"img-fluid rounded\" src=\"http://127.0.0.1:8000/img/Обложка.-Скидка-на-ремонт-под-ключ-300x300.png\" alt=\"Скидка\" width=\"300\" height=\"300\">\r\n<figcaption></figcaption>\r\n</figure>\r\n</div>\r\n</div>\r\n<div class=\"col-md-4 d-flex align-items-center\">\r\n<div class=\"discount-box text-center p-4\">\r\n<h4 class=\"text-success fw-bold\">ПРИ ЗАКАЗЕ КАПИТАЛЬНОГО РЕМОНТА КВАРТИРЫ ПОД КЛЮЧ</h4>\r\n<h2 class=\"text-danger fw-bold pulsing-text\">СКИДКА 10%</h2>\r\n<p class=\"text-success\">НА ВСЕ ВИДЫ РЕМОНТНО-ОТДЕЛОЧНЫХ РАБОТ!</p>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"container my-5 \">\r\n<div class=\"row justify-content-center\">\r\n<div class=\"col-md-8\">\r\n<h2 class=\"text-center text-primary fw-bold mb-4\">О НАШЕЙ КОМПАНИИ</h2>\r\n<div class=\"modern-box p-4 rounded shadow-sm\">\r\n<p class=\"mb-3\">Наша компания осуществляет: капитальный, дизайнерский, комплексный, косметический и бюджетный ремонт квартир под ключ в Красноярске.</p>\r\n<p class=\"mb-3\">На нашем сайте вы можете ознакомиться с <a class=\"text-primary fw-bold\" href=\"#\">ценами</a> на ремонт квартир в Красноярске, домов и нежилых помещений, почитать <a class=\"text-primary fw-bold\" href=\"#\">полезные советы</a> о ремонте, найти <a class=\"text-primary fw-bold\" href=\"#\">ответы</a> на интересующие вопросы, посмотреть на преображение квартир после ремонта в разделах <a class=\"text-primary fw-bold\" href=\"#\">фото</a> и <a class=\"text-primary fw-bold\" href=\"#\">видео отчеты</a>, изучить <a class=\"text-primary fw-bold\" href=\"#\">отзывы</a> о нашей работе и многое другое.</p>\r\n<p class=\"mb-3\">Мы надеемся, Вы найдете у нас то, что ищете!</p>\r\n<p class=\"text-danger fw-bold text-end\">С уважением, компания по ремонту квартир ИП ПОКИВАЙЛОВ!</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>', 'pages/page1.jpg', 'index', 'Yar Meta Description', 'Keyword1, Keyword2', 'ACTIVE', '2024-08-19 07:21:40', '2024-08-20 06:42:23');
 
 -- --------------------------------------------------------
 
@@ -385,7 +396,12 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (37, 'read_pages', 'pages', '2024-08-19 07:21:40', '2024-08-19 07:21:40'),
 (38, 'edit_pages', 'pages', '2024-08-19 07:21:40', '2024-08-19 07:21:40'),
 (39, 'add_pages', 'pages', '2024-08-19 07:21:40', '2024-08-19 07:21:40'),
-(40, 'delete_pages', 'pages', '2024-08-19 07:21:40', '2024-08-19 07:21:40');
+(40, 'delete_pages', 'pages', '2024-08-19 07:21:40', '2024-08-19 07:21:40'),
+(41, 'browse_works', 'works', '2024-08-20 06:35:28', '2024-08-20 06:35:28'),
+(42, 'read_works', 'works', '2024-08-20 06:35:28', '2024-08-20 06:35:28'),
+(43, 'edit_works', 'works', '2024-08-20 06:35:28', '2024-08-20 06:35:28'),
+(44, 'add_works', 'works', '2024-08-20 06:35:28', '2024-08-20 06:35:28'),
+(45, 'delete_works', 'works', '2024-08-20 06:35:28', '2024-08-20 06:35:28');
 
 -- --------------------------------------------------------
 
@@ -442,7 +458,12 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (37, 1),
 (38, 1),
 (39, 1),
-(40, 1);
+(40, 1),
+(41, 1),
+(42, 1),
+(43, 1),
+(44, 1),
+(45, 1);
 
 -- --------------------------------------------------------
 
@@ -644,6 +665,23 @@ CREATE TABLE `user_roles` (
   `role_id` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `works`
+--
+
+CREATE TABLE `works` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `area` double(8,2) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 --
 -- Индексы сохранённых таблиц
 --
@@ -779,6 +817,12 @@ ALTER TABLE `user_roles`
   ADD KEY `user_roles_role_id_index` (`role_id`);
 
 --
+-- Индексы таблицы `works`
+--
+ALTER TABLE `works`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -792,13 +836,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT для таблицы `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT для таблицы `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT для таблицы `failed_jobs`
@@ -816,13 +860,13 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT для таблицы `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT для таблицы `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT для таблицы `pages`
@@ -834,7 +878,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT для таблицы `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT для таблицы `personal_access_tokens`
@@ -871,6 +915,12 @@ ALTER TABLE `translations`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT для таблицы `works`
+--
+ALTER TABLE `works`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

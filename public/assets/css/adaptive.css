@@ -11,7 +11,7 @@
 .background-fixed {
     position: absolute;
     left: 0;
-    top: 60vh;
+    top: 42vh;
     width: 100%;
     height: 100vh; /* Высота на весь экран */
     background-position: center center; /* Центрирование изображения */
@@ -20,19 +20,23 @@
     z-index: -1;
 }
 
+.my-mt-5 {
+    margin-top: 20vh;
+}
+
 @media (min-width: 991.98px) {
     .header {
-        background-color: rgba(51, 51, 51, 0.8)!important;
+        background-color: rgba(51, 51, 51, 0.8) !important;
         /* Цвет фона #333 с 50% прозрачностью */
         padding: 15px 0;
         color: white;
     }
 
     .background-fixed {
-    position: absolute;
-    left: 0;
-    top: 0vh!important;
-}
+        position: absolute;
+        left: 0;
+        top: 0vh !important;
+    }
 
     .fs-dynamic {
         font-size: 1.6rem; /* Размер, приближенный к fs-4 */
@@ -56,5 +60,9 @@
         background-size: cover; /* Покрытие всего доступного пространства */
         background-attachment: fixed; /* Фиксация фона */
         z-index: -1;
+    }
+
+    .my-mt-5 {
+        margin-top: 25vh;
     }
 }
