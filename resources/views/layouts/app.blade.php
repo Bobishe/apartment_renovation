@@ -7,8 +7,10 @@
     <title>@yield('title', 'Главная')</title>
 
     <!-- Подключение Bootstrap -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Дополнительные стили -->
     <style>
         .header {
@@ -46,26 +48,39 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-3">
-                    <a href="/" class="logo">
+                    <a href="/index" class="logo">
                         <img src="{{ asset('img/logo.png') }}" alt="Логотип">
                     </a>
                 </div>
-                <div class="col-md-6 text-center">
-                    <p>Ремонт квартир в Красноярске</p>
-                    <small>Ежедневно с 09:00-21:00</small>
+                <div class="col-md-5 text-center">
+                    <p class="fs-4 mb-0">Ремонт квартир в Красноярске</p>
+                    <small>Ежедневно 09:00-21:00</small>
                 </div>
-                <div class="col-md-3 text-right">
+                <div class="col-md-2 text-right mt-3">
+                    <!-- Социальные иконки -->
+                    <a href="#" class="mr-2 bi bi-whatsapp p-1 text-bg-success"
+                        style="font-size: 1.3rem; color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;"></a>
+                    <a href="#" class="mr-2 bi bi-telegram p-1 text-bg-success"
+                        style="font-size: 1.3rem; color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;"></a>
+                    <a href="#" class="mr-2 bi bi bi-youtube p-1 text-bg-success"
+                        style="font-size: 1.3rem; color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;"></a>
+                    <a href="#" class="mr-2 p-1 text-bg-success"
+                        style="border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;">
+                        <img src="{{ asset('img/svg/odnoklassniki-svgrepo-com.svg') }}" alt="Odnoklassniki"
+                            style="width: 1.3rem; height: 1.3rem; color: white;">
+                    </a>
+
+
+                </div>
+                <div class="col-md-2 text-right ">
                     <div class="d-flex justify-content-end align-items-center">
-                        <!-- Социальные иконки -->
-                        <a href="#" class="mr-2"><img src="{{ asset('path/to/whatsapp.png') }}"
-                                alt="WhatsApp"></a>
-                        <a href="#" class="mr-2"><img src="{{ asset('path/to/telegram.png') }}"
-                                alt="Telegram"></a>
-                        <!-- иконки других соцсетей -->
-                        <a href="#" class="btn btn-success">Обратный звонок</a>
+
+
                     </div>
                     <p>+7 (391) 293-82-26</p>
+                    <a href="#" class="btn btn-success">Обратный звонок</a>
                 </div>
+
             </div>
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="collapse navbar-collapse justify-content-center">
@@ -152,9 +167,12 @@
 
 
     <!-- Подключение Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
+    </script>
 
 </body>
 
