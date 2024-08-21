@@ -34,6 +34,12 @@ Route::get('/{slug}', function ($slug) {
     if ($slug == 'index') {
         // Если slug равен 'home' или 'index', получаем последние три работы
         $works = Work::latest()->take(3)->get();
+        return view('index', compact('page', 'works'));
+    }
+    if ($slug == 'about') {
+        // Если slug равен 'home' или 'index', получаем последние три работы
+        $works = Work::latest()->take(3)->get();
+        return view('page/about', compact('page', 'works'));
     }
 
     // Возвращаем представление и передаем данные страницы и, если есть, работы

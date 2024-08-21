@@ -20,8 +20,24 @@
     z-index: -1;
 }
 
+.background-fixed-absolute {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh; /* Высота на весь экран */
+    background-position: center center; /* Центрирование изображения */
+    background-size: cover; /* Покрытие всего доступного пространства */
+    background-attachment: fixed; /* Фиксация фона */
+    z-index: -2;
+}
+
 .my-mt-5 {
     margin-top: 20vh;
+}
+
+.fs-lg-5 {
+    font-size: 1rem; /* Размер, приближенный к fs-5 */
 }
 
 @media (min-width: 991.98px) {
