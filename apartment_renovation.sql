@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Авг 20 2024 г., 16:42
+-- Время создания: Авг 21 2024 г., 10:30
 -- Версия сервера: 10.4.32-MariaDB
 -- Версия PHP: 8.1.25
 
@@ -127,14 +127,14 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (53, 6, 'created_at', 'timestamp', 'Created At', 1, 1, 1, 0, 0, 0, NULL, 10),
 (54, 6, 'updated_at', 'timestamp', 'Updated At', 1, 0, 0, 0, 0, 0, NULL, 11),
 (55, 6, 'image', 'image', 'Page Image', 0, 1, 1, 1, 1, 1, NULL, 12),
-(56, 11, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
-(57, 11, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{}', 2),
-(58, 11, 'description', 'text', 'Description', 1, 1, 1, 1, 1, 1, '{}', 3),
-(59, 11, 'image', 'image', 'Image', 1, 1, 1, 1, 1, 1, '{}', 4),
-(60, 11, 'address', 'text', 'Address', 1, 1, 1, 1, 1, 1, '{}', 5),
-(61, 11, 'area', 'text', 'Area', 1, 1, 1, 1, 1, 1, '{}', 6),
-(62, 11, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 7),
-(63, 11, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8);
+(64, 12, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(65, 12, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{}', 2),
+(67, 12, 'image', 'multiple_images', 'Image', 1, 1, 1, 1, 1, 1, '{}', 4),
+(70, 12, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 7),
+(71, 12, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
+(72, 12, 'url', 'text', 'Url', 1, 1, 1, 1, 1, 1, '{}', 5),
+(73, 12, 'adres', 'text', 'Adres', 1, 1, 1, 1, 1, 1, '{}', 3),
+(74, 12, 'area', 'text', 'Area', 1, 1, 1, 1, 1, 1, '{}', 8);
 
 -- --------------------------------------------------------
 
@@ -171,7 +171,7 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (4, 'categories', 'categories', 'Category', 'Categories', 'voyager-categories', 'TCG\\Voyager\\Models\\Category', NULL, '', '', 1, 0, NULL, '2024-08-19 07:21:39', '2024-08-19 07:21:39'),
 (5, 'posts', 'posts', 'Post', 'Posts', 'voyager-news', 'TCG\\Voyager\\Models\\Post', 'TCG\\Voyager\\Policies\\PostPolicy', '', '', 1, 0, NULL, '2024-08-19 07:21:39', '2024-08-19 07:21:39'),
 (6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, '', '', 1, 0, NULL, '2024-08-19 07:21:40', '2024-08-19 07:21:40'),
-(11, 'works', 'works', 'Work', 'Works', NULL, 'App\\Models\\Work', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2024-08-20 06:35:28', '2024-08-20 06:52:41');
+(12, 'works', 'works', 'Work', 'Наши работы', 'voyager-window-list', 'App\\Models\\Work', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2024-08-20 21:57:55', '2024-08-20 22:12:36');
 
 -- --------------------------------------------------------
 
@@ -237,19 +237,19 @@ CREATE TABLE `menu_items` (
 
 INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
 (1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 1, '2024-08-19 07:21:26', '2024-08-19 07:21:26', 'voyager.dashboard', NULL),
-(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 5, '2024-08-19 07:21:26', '2024-08-19 07:21:26', 'voyager.media.index', NULL),
+(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 4, '2024-08-19 07:21:26', '2024-08-20 22:00:22', 'voyager.media.index', NULL),
 (3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 3, '2024-08-19 07:21:26', '2024-08-19 07:21:26', 'voyager.users.index', NULL),
 (4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 2, '2024-08-19 07:21:26', '2024-08-19 07:21:26', 'voyager.roles.index', NULL),
 (5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 9, '2024-08-19 07:21:26', '2024-08-19 07:21:26', NULL, NULL),
-(6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 10, '2024-08-19 07:21:26', '2024-08-19 07:21:26', 'voyager.menus.index', NULL),
-(7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 11, '2024-08-19 07:21:26', '2024-08-19 07:21:26', 'voyager.database.index', NULL),
-(8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 12, '2024-08-19 07:21:26', '2024-08-19 07:21:26', 'voyager.compass.index', NULL),
-(9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 13, '2024-08-19 07:21:26', '2024-08-19 07:21:26', 'voyager.bread.index', NULL),
-(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 14, '2024-08-19 07:21:26', '2024-08-19 07:21:26', 'voyager.settings.index', NULL),
+(6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 1, '2024-08-19 07:21:26', '2024-08-20 22:00:22', 'voyager.menus.index', NULL),
+(7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 2, '2024-08-19 07:21:26', '2024-08-20 22:00:22', 'voyager.database.index', NULL),
+(8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 3, '2024-08-19 07:21:26', '2024-08-20 22:00:22', 'voyager.compass.index', NULL),
+(9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 4, '2024-08-19 07:21:26', '2024-08-20 22:00:22', 'voyager.bread.index', NULL),
+(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 10, '2024-08-19 07:21:26', '2024-08-20 22:00:22', 'voyager.settings.index', NULL),
 (11, 1, 'Categories', '', '_self', 'voyager-categories', NULL, NULL, 8, '2024-08-19 07:21:39', '2024-08-19 07:21:39', 'voyager.categories.index', NULL),
-(12, 1, 'Posts', '', '_self', 'voyager-news', NULL, NULL, 6, '2024-08-19 07:21:40', '2024-08-19 07:21:40', 'voyager.posts.index', NULL),
-(13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 7, '2024-08-19 07:21:40', '2024-08-19 07:21:40', 'voyager.pages.index', NULL),
-(14, 1, 'Works', '', '_self', NULL, NULL, NULL, 15, '2024-08-20 06:35:28', '2024-08-20 06:35:28', 'voyager.works.index', NULL);
+(12, 1, 'Posts', '', '_self', 'voyager-news', NULL, NULL, 5, '2024-08-19 07:21:40', '2024-08-20 22:00:22', 'voyager.posts.index', NULL),
+(13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 6, '2024-08-19 07:21:40', '2024-08-20 22:00:22', 'voyager.pages.index', NULL),
+(15, 1, 'Наши работы', '', '_self', NULL, NULL, NULL, 7, '2024-08-20 21:57:55', '2024-08-20 22:00:22', 'voyager.works.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -324,7 +324,7 @@ CREATE TABLE `pages` (
 --
 
 INSERT INTO `pages` (`id`, `author_id`, `title`, `excerpt`, `body`, `image`, `slug`, `meta_description`, `meta_keywords`, `status`, `created_at`, `updated_at`) VALUES
-(1, 2, 'index', 'Hang the jib grog grog blossom grapple dance the hempen jig gangway pressgang bilge rat to go on account lugger. Nelsons folly gabion line draught scallywag fire ship gaff fluke fathom case shot. Sea Legs bilge rat sloop matey gabion long clothes run a shot across the bow Gold Road cog league.', '<div class=\" position-relative text-center d-flex align-items-center justify-content-center\" style=\"height: 50vh;\">\r\n<div class=\"overlay-content\">\r\n<h1 class=\"text-white fw-bold\">ПРОИЗВОДИМ РЕМОНТ КВАРТИР В КРАСНОЯРСКЕ</h1>\r\n<div class=\"d-flex flex-wrap justify-content-center mt-4\"><a class=\"fs-lg-5 btn btn-success m-2 fw-bolder\">Ремонт квартир под ключ</a> <a class=\"btn btn-success m-2 fw-bolder fs-lg-5\">Дизайн интерьера</a> <a class=\"btn btn-success m-2 fw-bolder fs-lg-5\">Комплектация материалами</a> <a class=\"btn btn-success m-2 fw-bolder fs-lg-5\">Внутренняя отделка домов и коттеджей</a> <a class=\"btn btn-success m-2 fw-bolder fs-lg-5\">Гарантия на ремонт 24 месяца</a></div>\r\n<a class=\"btn btn-success mt-5 pulsing-btn\" href=\"#\">Заказать ремонт</a></div>\r\n</div>\r\n<div class=\"row justify-content-center my-mt-5\">\r\n<div class=\"col-md-4\">\r\n<div class=\"discount-card text-center position-relative\">\r\n<figure class=\"image\"><img class=\"img-fluid rounded\" src=\"http://127.0.0.1:8000/img/Обложка.-Скидка-на-ремонт-под-ключ-300x300.png\" alt=\"Скидка\" width=\"300\" height=\"300\">\r\n<figcaption></figcaption>\r\n</figure>\r\n</div>\r\n</div>\r\n<div class=\"col-md-4 d-flex align-items-center\">\r\n<div class=\"discount-box text-center p-4\">\r\n<h4 class=\"text-success fw-bold\">ПРИ ЗАКАЗЕ КАПИТАЛЬНОГО РЕМОНТА КВАРТИРЫ ПОД КЛЮЧ</h4>\r\n<h2 class=\"text-danger fw-bold pulsing-text\">СКИДКА 10%</h2>\r\n<p class=\"text-success\">НА ВСЕ ВИДЫ РЕМОНТНО-ОТДЕЛОЧНЫХ РАБОТ!</p>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"container my-5 \">\r\n<div class=\"row justify-content-center\">\r\n<div class=\"col-md-8\">\r\n<h2 class=\"text-center text-primary fw-bold mb-4\">О НАШЕЙ КОМПАНИИ</h2>\r\n<div class=\"modern-box p-4 rounded shadow-sm\">\r\n<p class=\"mb-3\">Наша компания осуществляет: капитальный, дизайнерский, комплексный, косметический и бюджетный ремонт квартир под ключ в Красноярске.</p>\r\n<p class=\"mb-3\">На нашем сайте вы можете ознакомиться с <a class=\"text-primary fw-bold\" href=\"#\">ценами</a> на ремонт квартир в Красноярске, домов и нежилых помещений, почитать <a class=\"text-primary fw-bold\" href=\"#\">полезные советы</a> о ремонте, найти <a class=\"text-primary fw-bold\" href=\"#\">ответы</a> на интересующие вопросы, посмотреть на преображение квартир после ремонта в разделах <a class=\"text-primary fw-bold\" href=\"#\">фото</a> и <a class=\"text-primary fw-bold\" href=\"#\">видео отчеты</a>, изучить <a class=\"text-primary fw-bold\" href=\"#\">отзывы</a> о нашей работе и многое другое.</p>\r\n<p class=\"mb-3\">Мы надеемся, Вы найдете у нас то, что ищете!</p>\r\n<p class=\"text-danger fw-bold text-end\">С уважением, компания по ремонту квартир ИП ПОКИВАЙЛОВ!</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>', 'pages/page1.jpg', 'index', 'Yar Meta Description', 'Keyword1, Keyword2', 'ACTIVE', '2024-08-19 07:21:40', '2024-08-20 06:42:23');
+(1, 2, 'index', 'Hang the jib grog grog blossom grapple dance the hempen jig gangway pressgang bilge rat to go on account lugger. Nelsons folly gabion line draught scallywag fire ship gaff fluke fathom case shot. Sea Legs bilge rat sloop matey gabion long clothes run a shot across the bow Gold Road cog league.', '<div class=\" position-relative text-center d-flex align-items-center justify-content-center\" style=\"height: 50vh;\">\r\n<div class=\"overlay-content\">\r\n<h1 class=\"text-white fw-bold\">ПРОИЗВОДИМ РЕМОНТ КВАРТИР В КРАСНОЯРСКЕ</h1>\r\n<div class=\"d-flex flex-wrap justify-content-center mt-4\"><a class=\"fs-lg-5 btn btn-success m-2 fw-bolder\">Ремонт квартир под ключ</a> <a class=\"btn btn-success m-2 fw-bolder fs-lg-5\">Дизайн интерьера</a> <a class=\"btn btn-success m-2 fw-bolder fs-lg-5\">Комплектация материалами</a> <a class=\"btn btn-success m-2 fw-bolder fs-lg-5\">Внутренняя отделка домов и коттеджей</a> <a class=\"btn btn-success m-2 fw-bolder fs-lg-5\">Гарантия на ремонт 24 месяца</a></div>\r\n<a class=\"btn btn-success mt-5 pulsing-btn\" href=\"#\">Заказать ремонт</a></div>\r\n</div>\r\n<div class=\"row justify-content-center my-mt-5\">\r\n<div class=\"col-md-4\">\r\n<div class=\"discount-card text-center position-relative\">\r\n<figure class=\"image\"><img class=\"img-fluid rounded\" src=\"http://127.0.0.1:8000/img/Обложка.-Скидка-на-ремонт-под-ключ-300x300.png\" alt=\"Скидка\" width=\"300\" height=\"300\">\r\n<figcaption></figcaption>\r\n</figure>\r\n</div>\r\n</div>\r\n<div class=\"col-md-4 d-flex align-items-center\">\r\n<div class=\"discount-box text-center p-4\">\r\n<h4 class=\"text-success fw-bold\">ПРИ ЗАКАЗЕ КАПИТАЛЬНОГО РЕМОНТА КВАРТИРЫ ПОД КЛЮЧ</h4>\r\n<h2 class=\"text-danger fw-bold pulsing-text\">СКИДКА 10%</h2>\r\n<p class=\"text-success\">НА ВСЕ ВИДЫ РЕМОНТНО-ОТДЕЛОЧНЫХ РАБОТ!</p>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"container my-5 \">\r\n<div class=\"row justify-content-center\">\r\n<div class=\"col-md-10\">\r\n<h2 class=\"text-center text-primary fw-bold mb-4\">О НАШЕЙ КОМПАНИИ</h2>\r\n<div class=\"modern-box p-4 rounded shadow-sm\" style=\"font-size: 18px;\">\r\n<p class=\"mb-3\">Наша компания осуществляет: капитальный, дизайнерский, комплексный, косметический и бюджетный ремонт квартир под ключ в Красноярске.</p>\r\n<p class=\"mb-3\">На нашем сайте вы можете ознакомиться с <a class=\"text-primary fw-bold\" href=\"#\">ценами</a> на ремонт квартир в Красноярске, домов и нежилых помещений, почитать <a class=\"text-primary fw-bold\" href=\"#\">полезные советы</a> о ремонте, найти <a class=\"text-primary fw-bold\" href=\"#\">ответы</a> на интересующие вопросы, посмотреть на преображение квартир после ремонта в разделах <a class=\"text-primary fw-bold\" href=\"#\">фото</a> и <a class=\"text-primary fw-bold\" href=\"#\">видео отчеты</a>, изучить <a class=\"text-primary fw-bold\" href=\"#\">отзывы</a> о нашей работе и многое другое.</p>\r\n<p class=\"mb-3\">Мы надеемся, Вы найдете у нас то, что ищете!</p>\r\n<p class=\"text-danger fw-bold text-end\">С уважением, компания по ремонту квартир ИП ПОКИВАЙЛОВ!</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>', 'pages\\August2024\\kusIeRX5m5kk17LiBhl6.png', 'index', 'Yar Meta Description', 'Keyword1, Keyword2', 'ACTIVE', '2024-08-19 07:21:40', '2024-08-20 22:29:54');
 
 -- --------------------------------------------------------
 
@@ -397,11 +397,11 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (38, 'edit_pages', 'pages', '2024-08-19 07:21:40', '2024-08-19 07:21:40'),
 (39, 'add_pages', 'pages', '2024-08-19 07:21:40', '2024-08-19 07:21:40'),
 (40, 'delete_pages', 'pages', '2024-08-19 07:21:40', '2024-08-19 07:21:40'),
-(41, 'browse_works', 'works', '2024-08-20 06:35:28', '2024-08-20 06:35:28'),
-(42, 'read_works', 'works', '2024-08-20 06:35:28', '2024-08-20 06:35:28'),
-(43, 'edit_works', 'works', '2024-08-20 06:35:28', '2024-08-20 06:35:28'),
-(44, 'add_works', 'works', '2024-08-20 06:35:28', '2024-08-20 06:35:28'),
-(45, 'delete_works', 'works', '2024-08-20 06:35:28', '2024-08-20 06:35:28');
+(46, 'browse_works', 'works', '2024-08-20 21:57:55', '2024-08-20 21:57:55'),
+(47, 'read_works', 'works', '2024-08-20 21:57:55', '2024-08-20 21:57:55'),
+(48, 'edit_works', 'works', '2024-08-20 21:57:55', '2024-08-20 21:57:55'),
+(49, 'add_works', 'works', '2024-08-20 21:57:55', '2024-08-20 21:57:55'),
+(50, 'delete_works', 'works', '2024-08-20 21:57:55', '2024-08-20 21:57:55');
 
 -- --------------------------------------------------------
 
@@ -459,11 +459,11 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (38, 1),
 (39, 1),
 (40, 1),
-(41, 1),
-(42, 1),
-(43, 1),
-(44, 1),
-(45, 1);
+(46, 1),
+(47, 1),
+(48, 1),
+(49, 1),
+(50, 1);
 
 -- --------------------------------------------------------
 
@@ -652,7 +652,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified_at`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
 (1, 1, 'Admin', 'admin@admin.com', 'users/default.png', NULL, '$2y$12$cluKHequhd2aYJ9zgkRATOTxaFt.ysaPONwPioZLcOA9PJZiT6B3O', '2ejkXEDZKip8DodWv3oOfo50BpmSOkyqA9IRDOAa3U2vpab1jiXtclh374wM', NULL, '2024-08-19 07:21:39', '2024-08-19 07:21:39'),
-(2, 1, 'admin', 'your-admin@admin.com', 'users/default.png', NULL, '$2y$12$fIqPEkpZeO82D1OSfdJwJOh2r8UqCyLDEdKPP2cbi7MD9Zl0F6ece', 'XFq9R1prJEGcmicB0xau1gVLi7Uir3RvlXD85DTD3IgGdgcy8pHTt9du2Tz6', '{\"locale\":\"ru\"}', '2024-08-19 08:02:30', '2024-08-19 08:05:22');
+(2, 1, 'admin', 'your-admin@admin.com', 'users\\August2024\\4P44sp2B4RwsmB1ZnMBh.png', NULL, '$2y$12$fIqPEkpZeO82D1OSfdJwJOh2r8UqCyLDEdKPP2cbi7MD9Zl0F6ece', 'JCCtAvTDsYishnXjYca32dW0EXlo4O6upUpoenarM6slYu19z3Jgnim01dYN', '{\"locale\":\"ru\"}', '2024-08-19 08:02:30', '2024-08-20 21:47:09');
 
 -- --------------------------------------------------------
 
@@ -674,13 +674,22 @@ CREATE TABLE `user_roles` (
 CREATE TABLE `works` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `title` varchar(255) NOT NULL,
-  `description` text NOT NULL,
+  `adres` text NOT NULL,
   `image` varchar(255) NOT NULL,
-  `address` varchar(255) NOT NULL,
-  `area` double(8,2) NOT NULL,
+  `url` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `area` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `works`
+--
+
+INSERT INTO `works` (`id`, `title`, `adres`, `image`, `url`, `created_at`, `updated_at`, `area`) VALUES
+(2, 'Ремонт квартиры под ключ', 'ул. 78 Добровольческой Бригады 25', '[\"works\\\\August2024\\\\HrNAvJXRs2iz2WtqESVw.jpg\",\"works\\\\August2024\\\\mp88Xz9lQ3GFMpsLhpQH.jpg\"]', '/works/1', '2024-08-20 22:13:06', '2024-08-20 22:13:06', '97,7'),
+(3, 'Дизайнерский ремонт квартиры', 'ул. Партизана Железняка 48Ж.', '[\"works\\\\August2024\\\\C9b11SqbeJ6ZTh6NGLpu.png\",\"works\\\\August2024\\\\GS19BVzKmdGUaym3EZI1.png\"]', '/works/2', '2024-08-20 22:20:49', '2024-08-20 22:20:49', '64,9'),
+(4, 'Ремонт квартиры в новостройке', 'ул. Петра Подзолкова 4.', '[\"works\\\\August2024\\\\2Gc7F3gA6YYM5MxXEZbU.png\",\"works\\\\August2024\\\\5RWsYbUpaXgck6DdxOfT.png\"]', '/works/3', '2024-08-20 22:24:16', '2024-08-20 22:24:16', '82,6');
 
 --
 -- Индексы сохранённых таблиц
@@ -836,13 +845,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT для таблицы `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- AUTO_INCREMENT для таблицы `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT для таблицы `failed_jobs`
@@ -860,7 +869,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT для таблицы `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT для таблицы `migrations`
@@ -878,7 +887,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT для таблицы `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT для таблицы `personal_access_tokens`
@@ -920,7 +929,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `works`
 --
 ALTER TABLE `works`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

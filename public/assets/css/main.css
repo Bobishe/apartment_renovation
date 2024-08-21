@@ -269,3 +269,116 @@ a.text-primary {
 a.text-primary:hover {
     border-bottom: 2px solid #d9534f;
 }
+
+/* крутой задний фон  */
+.custom-background {
+    background: linear-gradient(135deg, #c9c9c9 25%, #ffffff 100%);
+    padding: 50px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-custom {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.card-custom h5 {
+    color: #333;
+}
+
+.card-custom p {
+    color: #555;
+}
+
+.custom-container {
+    background-color: #f8f9fa;
+    padding: 30px;
+}
+
+/* отзывы */
+.reviews-section {
+    padding: 50px 0;
+}
+
+.reviews-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.reviews-section p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.reviews-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.review-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    margin: 15px;
+    width: 20%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+}
+
+.review-card img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.review-card h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.review-card .btn {
+    font-size: 1rem;
+    background-color: #157347;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.review-card .btn i {
+    margin-left: 10px;
+}
+
+.review-card .btn:hover {
+    background-color: #218838;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .review-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    .review-card {
+        width: 100%;
+    }
+}
