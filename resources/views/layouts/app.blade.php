@@ -122,8 +122,8 @@
                             Ремонт квартир ▾
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                            <li><a class="dropdown-item " href="/team">Ремонт квартиры-студии</a></li>
-                            <li><a class="dropdown-item " href="/team">Ремонт однокомнатной квартиры</a></li>
+                            <li><a class="dropdown-item " href="/studio_apartment">Ремонт квартиры-студии</a></li>
+                            <li><a class="dropdown-item " href="/studio_apartment1">Ремонт однокомнатной квартиры</a></li>
                             <li><a class="dropdown-item " href="/team">Ремонт двухкомнатной квартиры</a></li>
                             <li><a class="dropdown-item " href="/team">Ремонт трехкомнатной квартиры</a></li>
                             <li><a class="dropdown-item " href="/team">Ремонт четырехкомнатной квартиры</a>
