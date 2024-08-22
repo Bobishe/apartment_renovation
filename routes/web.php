@@ -40,5 +40,18 @@ Route::get('/{slug}', function ($slug) {
         return view('page/about', compact('page', 'works'));
     }
 
+    $roomSlugs = [
+        'studio_apartment',
+        'remont-trehkomnatnoj',
+        'studio_apartment1',
+        'remont-dvuhkomnatnoj',
+        'remont-chetyrehkomnatnoj',
+    ];
+
+    if (in_array($slug, $roomSlugs)) {
+        return view('page/room', compact('page', 'works'));
+    }
+
+
     return view('page/standart', compact('page', 'works'));
 });

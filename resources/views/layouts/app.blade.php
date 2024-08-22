@@ -33,9 +33,8 @@
         <div class="background-fixed-absolute">
 
         </div>
-
     </div>
-    <header class="header mt-0 pt-lg-5" style="z-index: 999">
+    <header class="header mt-0 pt-lg-5" style="z-index: ">
         <div class="container">
             <div class="row text-center align-items-center">
                 <div class="col-lg-3 mb-3 mb-lg-0">
@@ -50,19 +49,19 @@
                 <div class="col-lg-3 text-right mt-3  mb-3 mb-lg-0">
                     <!-- Социальные иконки -->
                     <a href="https://wa.me/79029238226?text=" class="mr-2 bi bi-whatsapp p-1 text-bg-success"
-                        style="background-color: #157347;font-size: 1.3rem; color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;"></a>
+                        style="background-color: #00a884;font-size: 1.3rem; color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;"></a>
                     <a href="https://tlgg.ru/remont_kvartir_24" class="mr-2 bi bi-telegram p-1 text-bg-success"
-                        style="background-color: #157347;font-size: 1.3rem; color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;"></a>
+                        style="background-color: #00a884;font-size: 1.3rem; color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;"></a>
                     <a href="https://ok.ru/group/60443121877243" class="mr-2 p-1 text-bg-success"
-                        style="background-color: #157347;border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;">
+                        style="background-color: #00a884;border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;">
                         <img src="{{ asset('img/svg/odnoklassniki-svgrepo-com.svg') }}" alt="Odnoklassniki"
                             style="width: 1.3rem; height: 1.3rem; color: white;">
                     </a>
                     <a href="https://www.youtube.com/channel/UC4-n2VGT67KX92gBBsPtMSA"
                         class="mr-2 bi bi bi-youtube p-1 text-bg-success"
-                        style="background-color: #157347;font-size: 1.3rem; color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;"></a>
+                        style="background-color: #00a884;font-size: 1.3rem; color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;"></a>
                     <a href="https://vk.com/remontkvartirkrasnoyarsk124" class="mr-2 p-1 text-bg-success"
-                        style="background-color: #157347;border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;">
+                        style="background-color: #00a884;border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; text-decoration: none;">
                         <img src="{{ asset('img/svg/vk-svgrepo-com.svg') }}" alt="vk"
                             style="width: 1.5rem; height: 1.3rem; color: white;">
                     </a>
@@ -123,10 +122,14 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
                             <li><a class="dropdown-item " href="/studio_apartment">Ремонт квартиры-студии</a></li>
-                            <li><a class="dropdown-item " href="/studio_apartment1">Ремонт однокомнатной квартиры</a></li>
-                            <li><a class="dropdown-item " href="/team">Ремонт двухкомнатной квартиры</a></li>
-                            <li><a class="dropdown-item " href="/team">Ремонт трехкомнатной квартиры</a></li>
-                            <li><a class="dropdown-item " href="/team">Ремонт четырехкомнатной квартиры</a>
+                            <li><a class="dropdown-item " href="/studio_apartment1">Ремонт однокомнатной квартиры</a>
+                            </li>
+                            <li><a class="dropdown-item " href="/remont-dvuhkomnatnoj">Ремонт
+                                    двухкомнатной квартиры</a></li>
+                            <li><a class="dropdown-item " href="/remont-trehkomnatnoj">Ремонт трехкомнатной
+                                    квартиры</a></li>
+                            <li><a class="dropdown-item " href="/remont-chetyrehkomnatnoj">Ремонт четырехкомнатной
+                                    квартиры</a>
                             </li>
                             <li><a class="dropdown-item " href="/team">Ремонт коттеджей</a></li>
                             <li><a class="dropdown-item " href="/team">Ремонт и отделка частного дома</a>

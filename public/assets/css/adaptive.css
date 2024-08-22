@@ -7,6 +7,10 @@
 .fs-extra {
     font-size: 1.25rem; /* Основной размер шрифта, эквивалент fs-4 */
 }
+header {
+    position: relative;
+    z-index: 1; /* Или больше, если нужно */
+}
 
 .background-fixed {
     position: absolute;
@@ -17,7 +21,7 @@
     background-position: center center; /* Центрирование изображения */
     background-size: cover; /* Покрытие всего доступного пространства */
     background-attachment: fixed; /* Фиксация фона */
-    z-index: -1;
+    z-index: -2;
 }
 
 .background-fixed-absolute {
@@ -29,7 +33,7 @@
     background-position: center center; /* Центрирование изображения */
     background-size: cover; /* Покрытие всего доступного пространства */
     background-attachment: fixed; /* Фиксация фона */
-    z-index: -2;
+    z-index: -1; /* Это значение должно быть выше, чем у .background-fixed, но ниже, чем у header */
 }
 
 .my-mt-5 {

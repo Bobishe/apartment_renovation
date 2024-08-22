@@ -1,5 +1,5 @@
 .header {
-    background-color: rgba(51, 51, 51, 1);
+    background-color: rgba(51, 51, 51, 0.1);
     /* Цвет фона #333 с 50% прозрачностью */
     padding: 15px 0;
     color: white;
