@@ -203,7 +203,7 @@
 
 
 
-
+    <x-priceBlock />
     <x-room />
     <x-flamp />
     <x-reviews />

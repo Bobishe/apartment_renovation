@@ -39,6 +39,14 @@ Route::get('/{slug}', function ($slug) {
     if ($slug == 'about' || $slug == 'prices') {
         return view('page/about', compact('page', 'works'));
     }
+    if ($slug == 'otzyvy' || $slug == 'prices') {
+        return view('page/otzyvy', compact('page', 'works'));
+    }
+    if ($slug == 'project' || $slug == 'prices') {
+        $works = Work::latest()->get();
+        return view('page/project', compact('page', 'works'));
+    }
+
 
     $roomSlugs = [
         'studio_apartment',

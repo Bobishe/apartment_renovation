@@ -19,22 +19,17 @@
 </head>
 
 <style>
-    .background-fixed-absolute {
+    .header {
         width: 100%;
-        height: 23vh;
         background-image: url("{{ asset('img/texturefabrik_dust-02-scaled.jpg') }}");
+        background-size: cover
     }
 </style>
 
 <body>
 
     <!-- Header -->
-    <div class="container-fluid">
-        <div class="background-fixed-absolute">
-
-        </div>
-    </div>
-    <header class="header mt-0 pt-lg-5" style="z-index: ">
+    <header class="header mt-0 pt-lg-5 pb-5" style="z-index: ">
         <div class="container">
             <div class="row text-center align-items-center">
                 <div class="col-lg-3 mb-3 mb-lg-0">
@@ -104,13 +99,13 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/reviews">Отзывы</a>
+                        <a class="nav-link" href="/otzyvy">Отзывы</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/prices">Цены</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/photo-reports">Фото отчеты</a>
+                        <a class="nav-link" href="/project">Фото отчеты</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/photo-reports">Видео отчеты</a>

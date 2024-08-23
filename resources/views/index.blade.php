@@ -24,51 +24,135 @@
 
         {!! $page->body !!}
 
-        @if ($works)
-            <div class="container mt-5">
-                <h2 class="text-center text-danger fw-bold mb-4">ФОТОГАЛЕРЕЯ НАШИХ РАБОТ</h2>
-                <div class="row mt-5">
-                    @foreach ($works as $work)
-                        <div class="col-md-4 d-flex align-items-stretch">
-                            <div class="card mb-4 shadow-sm">
-                                <!-- Слайдер изображений -->
-                                <div id="carousel-{{ $work->id }}" class="carousel slide" data-bs-ride="carousel"
-                                    data-bs-interval="4000">
-                                    <div class="carousel-inner" style="height: 250px; overflow: hidden;">
-                                        @foreach (json_decode($work->image, true) as $index => $image)
-                                            <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
-                                                <img src="{{ Voyager::image($image) }}" class="d-block w-100 h-100"
-                                                    alt="{{ $work->title }}" style="object-fit: cover;">
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                    <button class="carousel-control-prev" type="button"
-                                        data-bs-target="#carousel-{{ $work->id }}" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button"
-                                        data-bs-target="#carousel-{{ $work->id }}" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
+        <div class="container mt-5">
+            <h2 class="text-center text-danger fw-bold mb-4">ФОТОГАЛЕРЕЯ НАШИХ РАБОТ</h2>
+            <div class="row mt-5">
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card mb-4 shadow-sm">
+                        <!-- Слайдер изображений -->
+                        <div id="carousel-1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                            <div class="carousel-inner" style="height: 250px; overflow: hidden;">
+                                <div class="carousel-item active">
+                                    <img src="path_to_image_1.jpg" class="d-block w-100 h-100" alt="Работа 1"
+                                        style="object-fit: cover;">
                                 </div>
-
-                                <!-- Текстовая информация о работе -->
-                                <div class="card-body text-center d-flex flex-column">
-                                    <h5 class="card-title text-danger fw-bold fs-4">{{ $work->title }}</h5>
-                                    <p class="card-text fs-5">{{ $work->adres }}</p>
-                                    <p class="card-text fs-5">Площадь: {{ $work->area }} м<sup>2</sup></p>
-                                    <div class="mt-auto">
-                                        <a href="{{ $work->url }}" class="btn btn-success fs-5">Посмотреть</a>
-                                    </div>
+                                <div class="carousel-item">
+                                    <img src="path_to_image_2.jpg" class="d-block w-100 h-100" alt="Работа 1"
+                                        style="object-fit: cover;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="path_to_image_3.jpg" class="d-block w-100 h-100" alt="Работа 1"
+                                        style="object-fit: cover;">
                                 </div>
                             </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-1"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-1"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
-                    @endforeach
+                        <!-- Текстовая информация -->
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-title text-danger fw-bold fs-4">Ремонт квартиры под ключ</h5>
+                            <p class="card-text fs-5">ул. 78 Добровольческой Бригады 25.</p>
+                            <p class="card-text fs-5">Площадь: 97,7 м<sup>2</sup></p>
+                            
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-success fs-5">Посмотреть</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card mb-4 shadow-sm">
+                        <!-- Слайдер изображений -->
+                        <div id="carousel-2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                            <div class="carousel-inner" style="height: 250px; overflow: hidden;">
+                                <div class="carousel-item active">
+                                    <img src="http://127.0.0.1:8000/img/room/remont-dvuhkomnatnoj-kvartiry-bykovskogo-5d.-foto-18-225x300.jpg" class="d-block w-100 h-100" alt="Работа 2"
+                                        style="object-fit: cover;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="path_to_image_5.jpg" class="d-block w-100 h-100" alt="Работа 2"
+                                        style="object-fit: cover;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="path_to_image_6.jpg" class="d-block w-100 h-100" alt="Работа 2"
+                                        style="object-fit: cover;">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-2"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-2"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- Текстовая информация -->
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-title text-danger fw-bold fs-4">Дизайнерский ремонт квартиры</h5>
+                            <p class="card-text fs-5">ул. Партизана Железняка 48Ж.</p>
+                            <p class="card-text fs-5">Площадь: 120 м<sup>2</sup></p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-success fs-5">Посмотреть</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card mb-4 shadow-sm">
+                        <!-- Слайдер изображений -->
+                        <div id="carousel-3" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                            <div class="carousel-inner" style="height: 250px; overflow: hidden;">
+                                <div class="carousel-item active">
+                                    <img src="path_to_image_7.jpg" class="d-block w-100 h-100" alt="Работа 3"
+                                        style="object-fit: cover;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="path_to_image_8.jpg" class="d-block w-100 h-100" alt="Работа 3"
+                                        style="object-fit: cover;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="path_to_image_9.jpg" class="d-block w-100 h-100" alt="Работа 3"
+                                        style="object-fit: cover;">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-3"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-3"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- Текстовая информация -->
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-title text-danger fw-bold fs-4">Ремонт квартиры в новостройке</h5>
+                            <p class="card-text fs-5">ул. Петра Подзолкова 4.</p>
+                            <p class="card-text fs-5">Площадь: 200 м<sup>2</sup></p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-success fs-5">Посмотреть</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        @endif
+        </div>
+
 
 
     </div>
@@ -132,7 +216,8 @@
             </div>
         </div>
         <div class="text-center">
-            <a href="#" class="btn btn-success mt-3  pulsing-btn">Посмотреть все видео отчеты</a>
+            <a href="#" class="btn btn-success mt-3  pulsing-btn" style="background-color: #00a884;">Посмотреть все
+                видео отчеты</a>
         </div>
     </div>
 
@@ -164,8 +249,8 @@
         <div class="row container mx-auto">
             <div class="col-md-3">
                 <div class="card h-100">
-                    <img src="{{ asset('img/price/kompleksnyj-remont-trehkomnatnoj-kvartiry1.jpg') }}" class="card-img-top"
-                        alt="Ремонт квартир Красноярск">
+                    <img src="{{ asset('img/price/kompleksnyj-remont-trehkomnatnoj-kvartiry1.jpg') }}"
+                        class="card-img-top" alt="Ремонт квартир Красноярск">
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold">РЕМОНТ КВАРТИР КРАСНОЯРСК</h5>
                         <p class="card-text fs-6">от 5000 руб.<br>за КВ.М.</p>
