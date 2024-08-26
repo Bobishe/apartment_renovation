@@ -129,18 +129,19 @@
                             <li><a class="dropdown-item " href="/remont-v-kottedzhe">Ремонт коттеджей</a></li>
                             <li><a class="dropdown-item " href="/remont-doma">Ремонт и отделка частного дома</a>
                             </li>
-                            <li><a class="dropdown-item " href="/remont-kommercheskih-pomeshhenij">Ремонт коммерческих помещений</a></li>
-                            <li><a class="dropdown-item " href="/team">Ремонт офисов</a></li>
+                            <li><a class="dropdown-item " href="/remont-kommercheskih-pomeshhenij">Ремонт коммерческих
+                                    помещений</a></li>
+                            <li><a class="dropdown-item " href="/remont-ofisov">Ремонт офисов</a></li>
                             <li class="dropdown-submenu">
                                 <a class="dropdown-item dropdown-toggle ">Ремонт комнат</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item " href="/team">Ремонт гостиной</a></li>
-                                    <li><a class="dropdown-item " href="/team">Ремонт спальни</a></li>
-                                    <li><a class="dropdown-item " href="#">Ремонт детской</a></li>
-                                    <li><a class="dropdown-item " href="#">Ремонт кухни</a></li>
-                                    <li><a class="dropdown-item " href="#">Ремонт ванной</a></li>
-                                    <li><a class="dropdown-item " href="#">Ремонт туалета</a></li>
-                                    <li><a class="dropdown-item " href="#">Ремонт санузла</a></li>
+                                    <li><a class="dropdown-item " href="/remont-gostinoj">Ремонт гостиной</a></li>
+                                    <li><a class="dropdown-item " href="/remont-spalni">Ремонт спальни</a></li>
+                                    <li><a class="dropdown-item " href="/remont-detskoj">Ремонт детской</a></li>
+                                    <li><a class="dropdown-item " href="/remont-kuhni">Ремонт кухни</a></li>
+                                    <li><a class="dropdown-item " href="/remont-vannoj">Ремонт ванной</a></li>
+                                    <li><a class="dropdown-item " href="/remont-tualeta">Ремонт туалета</a></li>
+                                    <li><a class="dropdown-item " href="/remont-sanuzla">Ремонт санузла</a></li>
                                     <li><a class="dropdown-item " href="#">Ремонт балкона</a></li>
                                 </ul>
                             </li>

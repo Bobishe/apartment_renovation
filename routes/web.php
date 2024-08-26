@@ -52,7 +52,7 @@ Route::get('/{slug}', function ($slug) {
     if ($slug == 'vopros-otvet' || $slug == 'kontakty') {
         return view('page/index', compact('page', 'works'));
     }
-    
+
 
     $roomSlugs = [
         'studio_apartment',
@@ -63,6 +63,14 @@ Route::get('/{slug}', function ($slug) {
         'remont-v-kottedzhe',
         'remont-doma',
         'remont-kommercheskih-pomeshhenij',
+        'remont-ofisov',
+        'remont-gostinoj',
+        'remont-spalni',
+        'remont-detskoj',
+        'remont-kuhni',
+        'remont-vannoj',
+        'remont-tualeta',
+        'remont-sanuzla',
     ];
 
     if (in_array($slug, $roomSlugs)) {
