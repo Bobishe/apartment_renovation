@@ -33,16 +33,16 @@
                         <div id="carousel-1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                             <div class="carousel-inner" style="height: 250px; overflow: hidden;">
                                 <div class="carousel-item active">
-                                    <img src="path_to_image_1.jpg" class="d-block w-100 h-100" alt="Работа 1"
-                                        style="object-fit: cover;">
+                                    <img src="https://via.placeholder.com/300x200" class="d-block w-100 h-100"
+                                        alt="Работа 2" style="object-fit: cover;">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="path_to_image_2.jpg" class="d-block w-100 h-100" alt="Работа 1"
-                                        style="object-fit: cover;">
+                                    <img src="https://via.placeholder.com/300x200" class="d-block w-100 h-100"
+                                        alt="Работа 2" style="object-fit: cover;">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="path_to_image_3.jpg" class="d-block w-100 h-100" alt="Работа 1"
-                                        style="object-fit: cover;">
+                                    <img src="https://via.placeholder.com/300x200" class="d-block w-100 h-100"
+                                        alt="Работа 2" style="object-fit: cover;">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carousel-1"
@@ -61,7 +61,6 @@
                             <h5 class="card-title text-danger fw-bold fs-4">Ремонт квартиры под ключ</h5>
                             <p class="card-text fs-5">ул. 78 Добровольческой Бригады 25.</p>
                             <p class="card-text fs-5">Площадь: 97,7 м<sup>2</sup></p>
-                            
                             <div class="mt-auto">
                                 <a href="#" class="btn btn-success fs-5">Посмотреть</a>
                             </div>
@@ -75,16 +74,16 @@
                         <div id="carousel-2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                             <div class="carousel-inner" style="height: 250px; overflow: hidden;">
                                 <div class="carousel-item active">
-                                    <img src="http://127.0.0.1:8000/img/room/remont-dvuhkomnatnoj-kvartiry-bykovskogo-5d.-foto-18-225x300.jpg" class="d-block w-100 h-100" alt="Работа 2"
-                                        style="object-fit: cover;">
+                                    <img src="https://via.placeholder.com/300x200" class="d-block w-100 h-100"
+                                        alt="Работа 2" style="object-fit: cover;">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="path_to_image_5.jpg" class="d-block w-100 h-100" alt="Работа 2"
-                                        style="object-fit: cover;">
+                                    <img src="https://via.placeholder.com/300x200" class="d-block w-100 h-100"
+                                        alt="Работа 2" style="object-fit: cover;">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="path_to_image_6.jpg" class="d-block w-100 h-100" alt="Работа 2"
-                                        style="object-fit: cover;">
+                                    <img src="https://via.placeholder.com/300x200" class="d-block w-100 h-100"
+                                        alt="Работа 2" style="object-fit: cover;">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carousel-2"
@@ -116,16 +115,16 @@
                         <div id="carousel-3" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                             <div class="carousel-inner" style="height: 250px; overflow: hidden;">
                                 <div class="carousel-item active">
-                                    <img src="path_to_image_7.jpg" class="d-block w-100 h-100" alt="Работа 3"
-                                        style="object-fit: cover;">
+                                    <img src="https://via.placeholder.com/300x200" class="d-block w-100 h-100"
+                                        alt="Работа 3" style="object-fit: cover;">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="path_to_image_8.jpg" class="d-block w-100 h-100" alt="Работа 3"
-                                        style="object-fit: cover;">
+                                    <img src="https://via.placeholder.com/300x200" class="d-block w-100 h-100"
+                                        alt="Работа 3" style="object-fit: cover;">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="path_to_image_9.jpg" class="d-block w-100 h-100" alt="Работа 3"
-                                        style="object-fit: cover;">
+                                    <img src="https://via.placeholder.com/300x200" class="d-block w-100 h-100"
+                                        alt="Работа 3" style="object-fit: cover;">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carousel-3"

@@ -39,14 +39,20 @@ Route::get('/{slug}', function ($slug) {
     if ($slug == 'about' || $slug == 'prices') {
         return view('page/about', compact('page', 'works'));
     }
-    if ($slug == 'otzyvy' || $slug == 'prices') {
+    if ($slug == 'otzyvy') {
         return view('page/otzyvy', compact('page', 'works'));
     }
-    if ($slug == 'project' || $slug == 'prices') {
+    if ($slug == 'project') {
         $works = Work::latest()->get();
         return view('page/project', compact('page', 'works'));
     }
-
+    if ($slug == 'dizajn-intererov') {
+        return view('page/dizajn-intererov', compact('page', 'works'));
+    }
+    if ($slug == 'vopros-otvet' || $slug == 'kontakty') {
+        return view('page/index', compact('page', 'works'));
+    }
+    
 
     $roomSlugs = [
         'studio_apartment',
@@ -54,6 +60,9 @@ Route::get('/{slug}', function ($slug) {
         'studio_apartment1',
         'remont-dvuhkomnatnoj',
         'remont-chetyrehkomnatnoj',
+        'remont-v-kottedzhe',
+        'remont-doma',
+        'remont-kommercheskih-pomeshhenij',
     ];
 
     if (in_array($slug, $roomSlugs)) {

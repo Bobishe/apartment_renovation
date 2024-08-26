@@ -1,5 +1,5 @@
 
-<h3 class="text-center text-danger fw-bold mb-4">Преимущества компании ИП Покивайлов</h3>
+<h3 class="text-center text-danger fw-bold mb-4 my-5">Преимущества компании ИП Покивайлов</h3>
 
 <div class="row text-center container mx-auto">
     <div class="col-md-4 mb-3">

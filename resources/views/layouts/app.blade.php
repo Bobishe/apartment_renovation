@@ -126,10 +126,10 @@
                             <li><a class="dropdown-item " href="/remont-chetyrehkomnatnoj">Ремонт четырехкомнатной
                                     квартиры</a>
                             </li>
-                            <li><a class="dropdown-item " href="/team">Ремонт коттеджей</a></li>
-                            <li><a class="dropdown-item " href="/team">Ремонт и отделка частного дома</a>
+                            <li><a class="dropdown-item " href="/remont-v-kottedzhe">Ремонт коттеджей</a></li>
+                            <li><a class="dropdown-item " href="/remont-doma">Ремонт и отделка частного дома</a>
                             </li>
-                            <li><a class="dropdown-item " href="/team">Ремонт коммерческих помещений</a></li>
+                            <li><a class="dropdown-item " href="/remont-kommercheskih-pomeshhenij">Ремонт коммерческих помещений</a></li>
                             <li><a class="dropdown-item " href="/team">Ремонт офисов</a></li>
                             <li class="dropdown-submenu">
                                 <a class="dropdown-item dropdown-toggle ">Ремонт комнат</a>
@@ -183,7 +183,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/photo-reports">Дизайн интерьера</a>
+                        <a class="nav-link" href="/dizajn-intererov">Дизайн интерьера</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -193,12 +193,12 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item      " href="/team">Статьи о ремонте</a></li>
                             <li><a class="dropdown-item " href="/team">Статьи про дизайн интерьера</a></li>
-                            <li><a class="dropdown-item " href="/team">Вопрос ответ</a></li>
+                            <li><a class="dropdown-item " href="/vopros-otvet">Вопрос ответ</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/photo-reports">Контакты</a>
+                        <a class="nav-link" href="/kontakty">Контакты</a>
                     </li>
                 </ul>
             </div>
