@@ -253,7 +253,8 @@
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold">РЕМОНТ КВАРТИР КРАСНОЯРСК</h5>
                         <p class="card-text fs-6">от 5000 руб.<br>за КВ.М.</p>
-                        <a href="#" class="btn btn-success">Оставить заявку</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                            class="btn btn-success">Оставить заявку</a>
                     </div>
                 </div>
             </div>
@@ -263,7 +264,8 @@
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold">РЕМОНТ КВАРТИР ПОД КЛЮЧ</h5>
                         <p class="card-text fs-6">от 8000 руб.<br>за КВ.М.</p>
-                        <a href="#" class="btn btn-success">Оставить заявку</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                            class="btn btn-success">Оставить заявку</a>
                     </div>
                 </div>
             </div>
@@ -273,7 +275,8 @@
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold" style="min-height: 50px">КАПИТАЛЬНЫЙ РЕМОНТ</h5>
                         <p class="card-text fs-6">от 9000 руб.<br>за КВ.М.</p>
-                        <a href="#" class="btn btn-success">Оставить заявку</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                            class="btn btn-success">Оставить заявку</a>
                     </div>
                 </div>
             </div>
@@ -284,7 +287,8 @@
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold">РЕМОНТ ПО ДИЗАЙН-ПРОЕКТУ</h5>
                         <p class="card-text fs-6">от 15000 руб.<br>за КВ.М.</p>
-                        <a href="#" class="btn btn-success">Оставить заявку</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                            class="btn btn-success">Оставить заявку</a>
                     </div>
                 </div>
             </div>
@@ -296,7 +300,8 @@
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold">КОСМЕТИЧЕСКИЙ РЕМОНТ</h5>
                         <p class="card-text fs-6">от 3500 руб.<br>за КВ.М.</p>
-                        <a href="#" class="btn btn-success">Оставить заявку</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                            class="btn btn-success">Оставить заявку</a>
                     </div>
                 </div>
             </div>
@@ -307,7 +312,8 @@
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold">КОМПЛЕКСНЫЙ РЕМОНТ В НОВОСТРОЙКЕ</h5>
                         <p class="card-text fs-6">от 6500 руб.<br>за КВ.М.</p>
-                        <a href="#" class="btn btn-success">Оставить заявку</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                            class="btn btn-success">Оставить заявку</a>
                     </div>
                 </div>
             </div>
@@ -317,7 +323,8 @@
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold">ЕВРОРЕМОНТ</h5>
                         <p class="card-text fs-6">от 13000 руб.<br>за КВ.М.</p>
-                        <a href="#" class="btn btn-success">Оставить заявку</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                            class="btn btn-success">Оставить заявку</a>
                     </div>
                 </div>
             </div>
@@ -328,7 +335,8 @@
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold">БЮДЖЕТНЫЙ РЕМОНТ</h5>
                         <p class="card-text fs-6">от 5000 руб.<br>за КВ.М.</p>
-                        <a href="#" class="btn btn-success">Оставить заявку</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                            class="btn btn-success">Оставить заявку</a>
                     </div>
                 </div>
             </div>
@@ -339,7 +347,8 @@
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold">ЧЕРНОВАЯ ОТДЕЛКА КВАРТИР</h5>
                         <p class="card-text fs-6">от 4500 руб.<br>за КВ.М.</p>
-                        <a href="#" class="btn btn-success">Оставить заявку</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                            class="btn btn-success">Оставить заявку</a>
                     </div>
                 </div>
             </div>
@@ -350,7 +359,8 @@
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold">ЧИСТОВАЯ ОТДЕЛКА КВАРТИР</h5>
                         <p class="card-text fs-6">от 3500 руб.<br>за КВ.М.</p>
-                        <a href="#" class="btn btn-success">Оставить заявку</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                            class="btn btn-success">Оставить заявку</a>
                     </div>
                 </div>
             </div>
@@ -361,7 +371,8 @@
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold">РЕМОНТ ВАННОЙ КОМНАТЫ И ТУАЛЕТА</h5>
                         <p class="card-text fs-6">от 170000 руб.<br>комплекс</p>
-                        <a href="#" class="btn btn-success">Оставить заявку</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                            class="btn btn-success">Оставить заявку</a>
                     </div>
                 </div>
             </div>
@@ -372,7 +383,8 @@
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold">РЕМОНТ СОВМЕЩЕННОГО САНУЗЛА</h5>
                         <p class="card-text fs-6">от 160000 руб.<br>комплекс</p>
-                        <a href="#" class="btn btn-success">Оставить заявку</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                            class="btn btn-success">Оставить заявку</a>
                     </div>
                 </div>
             </div>
@@ -433,7 +445,8 @@
         </div>
 
         <div class="text-center mt-4">
-            <a href="#" class="btn btn-success mx-2">Оставить заявку</a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                class="btn btn-success mx-2">Оставить заявку</a>
             <a href="#" class="btn btn-outline-success mx-2">Подробнее</a>
             <p class="mt-3 text-muted fs-6">*Сроки могут варьироваться в зависимости от сложности работ</p>
         </div>

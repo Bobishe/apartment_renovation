@@ -14,7 +14,8 @@
                 <button class="col-12 col-md-4 btn btn-outline-light  ">Авторское сопровождение</button>
                 <button class="col-12 col-md-4 btn btn-outline-light  ">Реализация проекта</button>
             </div>
-            <a class="btn btn-success mt-5 pulsing-btn" style="background-color: #00a884;" href="#">Заказать проект</a>
+            <a class="btn btn-success mt-5 pulsing-btn" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                style="background-color: #00a884;" href="#">Заказать проект</a>
         </div>
     </div>
 
@@ -319,7 +320,8 @@
                             <li>Планы размещения и подключения розеток, выключателей и осветительных приборов.</li>
                         </ul>
                         <div class="text-center">
-                            <a href="#" class="btn btn-success">Оставить заявку</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                                class="btn btn-success">Оставить заявку</a>
                         </div>
                     </div>
                 </div>
@@ -340,7 +342,8 @@
                             <li>Реалистичная фото 3D визуализация будущего интерьера.</li>
                         </ul>
                         <div class="text-center">
-                            <a href="#" class="btn btn-success">Оставить заявку</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                                class="btn btn-success">Оставить заявку</a>
                         </div>
                     </div>
                 </div>
@@ -361,7 +364,8 @@
                             <li>Подбор и комплектация материалами и мебелью.</li>
                         </ul>
                         <div class="text-center">
-                            <a href="#" class="btn btn-success">Оставить заявку</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                                class="btn btn-success">Оставить заявку</a>
                         </div>
                     </div>
                 </div>
@@ -382,7 +386,8 @@
                             <li>Зонирование пространства.</li>
                         </ul>
                         <div class="text-center">
-                            <a href="#" class="btn btn-success">Оставить заявку</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                                class="btn btn-success">Оставить заявку</a>
                         </div>
                     </div>
                 </div>
@@ -400,7 +405,8 @@
                             <li>Работа с поставщиками.</li>
                         </ul>
                         <div class="text-center">
-                            <a href="#" class="btn btn-success">Оставить заявку</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                                class="btn btn-success">Оставить заявку</a>
                         </div>
                     </div>
                 </div>
@@ -418,7 +424,8 @@
                             <li>Выбор от картин и текстиля до столовых приборов по индивидуальному запросу Заказчика.</li>
                         </ul>
                         <div class="text-center">
-                            <a href="#" class="btn btn-success">Оставить заявку</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                                class="btn btn-success">Оставить заявку</a>
                         </div>
                     </div>
                 </div>
@@ -440,7 +447,8 @@
                             <li>Кабинет.</li>
                         </ul>
                         <div class="text-center">
-                            <a href="#" class="btn btn-success">Оставить заявку</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                                class="btn btn-success">Оставить заявку</a>
                         </div>
                     </div>
                 </div>
@@ -459,7 +467,8 @@
                             <li>Лондри.</li>
                         </ul>
                         <div class="text-center">
-                            <a href="#" class="btn btn-success">Оставить заявку</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                                class="btn btn-success">Оставить заявку</a>
                         </div>
                     </div>
                 </div>
@@ -476,7 +485,8 @@
                                 под Ваш интерьер.</li>
                         </ul>
                         <div class="text-center">
-                            <a href="#" class="btn btn-success">Оставить заявку</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#callbackModal"
+                                class="btn btn-success">Оставить заявку</a>
                         </div>
                     </div>
                 </div>

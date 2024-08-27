@@ -28,6 +28,10 @@
 
 <body>
 
+
+    <x-form />
+
+
     <!-- Header -->
     <header class="header mt-0 pt-lg-5 pb-5" style="z-index: ">
         <div class="container">
@@ -65,7 +69,8 @@
                 </div>
                 <div class="col-lg-2 text-right ">
                     <p class="fs-5 mb-1 fw-bold ">+7 (391) 293-82-26</p>
-                    <a href="#" class="btn btn-success">Обратный звонок</a>
+                    <a href="#" class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#callbackModal">Обратный звонок</a>
                 </div>
 
             </div>
@@ -74,6 +79,10 @@
 
 
     </header>
+
+
+
+
 
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid">
@@ -148,14 +157,20 @@
                             <li class="dropdown-submenu">
                                 <a class="dropdown-item dropdown-toggle ">Виды ремонта</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item " href="/dizajnerskij-remont-kvartir">Дизайнерский ремонт</a></li>
+                                    <li><a class="dropdown-item " href="/dizajnerskij-remont-kvartir">Дизайнерский
+                                            ремонт</a></li>
                                     <li><a class="dropdown-item " href="/remont-pod-klyuch">Ремонт под ключ</a></li>
-                                    <li><a class="dropdown-item " href="/kapitalnyj-remont">Капитальный ремонт</a></li>
+                                    <li><a class="dropdown-item " href="/kapitalnyj-remont">Капитальный ремонт</a>
+                                    </li>
                                     <li><a class="dropdown-item " href="/evroremont">Евроремонт</a></li>
-                                    <li><a class="dropdown-item " href="/kosmeticheskij-remont-kvartir">Косметический ремонт</a></li>
-                                    <li><a class="dropdown-item " href="/remont-v-hrushhyovke">Ремонт в хрущёвке</a></li>
-                                    <li><a class="dropdown-item " href="/remont-v-novostrojke">Ремонт в новостройке</a></li>
-                                    <li><a class="dropdown-item " href="#">Черновая отделка</a></li>
+                                    <li><a class="dropdown-item " href="/kosmeticheskij-remont-kvartir">Косметический
+                                            ремонт</a></li>
+                                    <li><a class="dropdown-item " href="/remont-v-hrushhyovke">Ремонт в хрущёвке</a>
+                                    </li>
+                                    <li><a class="dropdown-item " href="/remont-v-novostrojke">Ремонт в
+                                            новостройке</a></li>
+                                    <li><a class="dropdown-item " href="/chernovaya-otdelka-2">Черновая отделка</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
@@ -164,18 +179,34 @@
                                     <li class="dropdown-submenu">
                                         <a class="dropdown-item dropdown-toggle ">Стены</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item " href="#">Штукатурка стен</a>
+                                            <li><a class="dropdown-item "
+                                                    href="/vyravnivanie-sten-shtukaturkoj">Штукатурка стен</a>
                                             </li>
-                                            <li><a class="dropdown-item " href="#">Окраска стен</a></li>
+                                            <li><a class="dropdown-item " href="/shpaklyovka-sten">Шпаклевка стен</a>
+                                            </li>
+                                            <li><a class="dropdown-item " href="/poklejka-oboev-2">Поклейка обоев</a>
+                                            </li>
+                                            <li><a class="dropdown-item " href="/dekorativnaya-shtukaturka">Окраска
+                                                    стен</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown-submenu">
                                         <a class="dropdown-item dropdown-toggle ">Ремонт
                                             пола</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item " href="#">Укладка ламината</a>
+                                            <li><a class="dropdown-item " href="/montazh-tyoplogo-pola">Монтаж теплого
+                                                    пола</a>
                                             </li>
-                                            <li><a class="dropdown-item " href="#">Укладка паркета</a>
+                                            <li><a class="dropdown-item " href="/styazhka-pola">Стяжка пола</a>
+                                            </li>
+                                            <li><a class="dropdown-item " href="/ustrojstvo-nalivnogo-pola">Устройство
+                                                    наливного пола</a>
+                                            </li>
+                                            <li><a class="dropdown-item " href="/ukladka-linoleuma">Укладка
+                                                    линолеума</a>
+                                            </li>
+                                            <li><a class="dropdown-item " href="/ukladka-laminata-2">Укладка ламината
+                                                </a>
                                             </li>
                                         </ul>
                                     </li>

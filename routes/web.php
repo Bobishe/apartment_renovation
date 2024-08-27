@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CallbackController;
+
+
 
 use App\Models\Page;
 use App\Models\Work;
@@ -16,7 +19,9 @@ use App\Models\Work;
 |
 */
 
-require __DIR__ . '/auth.php';
+
+Route::post('/send-callback', [CallbackController::class, 'send']);
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
@@ -79,6 +84,17 @@ Route::get('/{slug}', function ($slug) {
         'kosmeticheskij-remont-kvartir',
         'remont-v-hrushhyovke',
         'remont-v-novostrojke',
+        'chernovaya-otdelka-2',
+        'vyravnivanie-sten-shtukaturkoj',
+        'shpaklyovka-sten',
+        'poklejka-oboev-2',
+        'dekorativnaya-shtukaturka',
+        'montazh-tyoplogo-pola',
+        'styazhka-pola',
+        'ustrojstvo-nalivnogo-pola',
+        'ukladka-linoleuma',
+        'ukladka-laminata-2',
+
     ];
 
     if (in_array($slug, $roomSlugs)) {
