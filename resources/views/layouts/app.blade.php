@@ -142,19 +142,19 @@
                                     <li><a class="dropdown-item " href="/remont-vannoj">Ремонт ванной</a></li>
                                     <li><a class="dropdown-item " href="/remont-tualeta">Ремонт туалета</a></li>
                                     <li><a class="dropdown-item " href="/remont-sanuzla">Ремонт санузла</a></li>
-                                    <li><a class="dropdown-item " href="#">Ремонт балкона</a></li>
+                                    <li><a class="dropdown-item " href="/remont-balkona">Ремонт балкона</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
                                 <a class="dropdown-item dropdown-toggle ">Виды ремонта</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item " href="#">Дизайнерский ремонт</a></li>
-                                    <li><a class="dropdown-item " href="#">Ремонт под ключ</a></li>
-                                    <li><a class="dropdown-item " href="#">Капитальный ремонт</a></li>
-                                    <li><a class="dropdown-item " href="#">Евроремонт</a></li>
-                                    <li><a class="dropdown-item " href="#">Косметический ремонт</a></li>
-                                    <li><a class="dropdown-item " href="#">Ремонт в хрущёвке</a></li>
-                                    <li><a class="dropdown-item " href="#">Ремонт в новостройке</a></li>
+                                    <li><a class="dropdown-item " href="/dizajnerskij-remont-kvartir">Дизайнерский ремонт</a></li>
+                                    <li><a class="dropdown-item " href="/remont-pod-klyuch">Ремонт под ключ</a></li>
+                                    <li><a class="dropdown-item " href="/kapitalnyj-remont">Капитальный ремонт</a></li>
+                                    <li><a class="dropdown-item " href="/evroremont">Евроремонт</a></li>
+                                    <li><a class="dropdown-item " href="/kosmeticheskij-remont-kvartir">Косметический ремонт</a></li>
+                                    <li><a class="dropdown-item " href="/remont-v-hrushhyovke">Ремонт в хрущёвке</a></li>
+                                    <li><a class="dropdown-item " href="/remont-v-novostrojke">Ремонт в новостройке</a></li>
                                     <li><a class="dropdown-item " href="#">Черновая отделка</a></li>
                                 </ul>
                             </li>

@@ -31,7 +31,7 @@ Route::get('/{slug}', function ($slug) {
     $works = null;
 
     // Проверяем slug
-    if ($slug == 'index') {
+    if ($slug == 'index' || $slug == '/') {
         // Если slug равен 'home' или 'index', получаем последние три работы
         $works = Work::latest()->take(3)->get();
         return view('index', compact('page', 'works'));
@@ -71,6 +71,14 @@ Route::get('/{slug}', function ($slug) {
         'remont-vannoj',
         'remont-tualeta',
         'remont-sanuzla',
+        'remont-balkona',
+        'dizajnerskij-remont-kvartir',
+        'remont-pod-klyuch',
+        'kapitalnyj-remont',
+        'evroremont',
+        'kosmeticheskij-remont-kvartir',
+        'remont-v-hrushhyovke',
+        'remont-v-novostrojke',
     ];
 
     if (in_array($slug, $roomSlugs)) {
