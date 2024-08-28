@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Авг 27 2024 г., 18:09
+-- Время создания: Авг 28 2024 г., 10:05
 -- Версия сервера: 10.4.32-MariaDB
--- Версия PHP: 8.1.25
+-- Версия PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,74 @@ SET time_zone = "+00:00";
 --
 -- База данных: `apartment_renovation`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `blogs`
+--
+
+CREATE TABLE `blogs` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `url` varchar(255) NOT NULL,
+  `img` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `blogs`
+--
+
+INSERT INTO `blogs` (`id`, `title`, `description`, `url`, `img`, `created_at`, `updated_at`) VALUES
+(1, 'Технология демонтажа сантехкабины', 'Техника безопасности и технология демонтажа сантехкабины в квартире. Что из себя представляет сантехкабина Это конструкция в виде большого короба, которая изготавливалась из асбоцемента или армированного', 'https://remontpodkluch24.ru/tehnika-bezopasnosti-pri-demontazhe-santehnicheskoj-kabiny/', 'blogs\\August2024\\Ui6MKTiNfmUIw02smoYo.png', '2024-08-27 21:59:40', '2024-08-27 21:59:40'),
+(2, 'Усиление дверного проема', 'В данной статье мы расскажем про усиление дверного проема входной двери. Причины выполнения Со временем могут образоваться трещины, появиться видимые разрушения кирпича или пеноблока и', 'https://remontpodkluch24.ru/usilenie-dvernogo-proema/', 'blogs\\August2024\\qQ23QBS1T4sWJyzYl212.png', '2024-08-27 22:40:30', '2024-08-27 22:40:30'),
+(3, 'Технология укладки керамогранита', 'Технология укладки напольного керамогранита. В первую очередь важно оценить состояние пола, чтобы понять, какой комплекс подготовки потребуется. Сначала мы демонтируем старую поверхность до основания, после', 'https://remontpodkluch24.ru/tehnologiya-ukladki-keramogranita-na-pol/', 'blogs\\August2024\\hhCRmBXF72PyKDNBz71B.png', '2024-08-27 22:41:19', '2024-08-27 22:41:19'),
+(4, 'Ремонт квартиры в одной организации', 'В нашей статье мы расскажем почему заказ ремонта квартиры в одной компании выгоднее, чем обращение в разные на каждый вид работ отдельно. При поиске подрядчика', 'https://remontpodkluch24.ru/pochemu-vse-vidy-remonta-luchshe-zakazyvat-v-odnoj-organizaczii/', 'blogs\\August2024\\sHrZ2TNPXPhQqe4vqpeU.png', '2024-08-27 22:41:59', '2024-08-27 22:41:59'),
+(5, 'Предоплата на ремонт квартиры', 'Внесение предоплаты является одним из основных пунктов договора. При заключении берется предоплата на работу и закупку материала — все внесения денежных средств фиксируется в графике оплаты,', 'https://remontpodkluch24.ru/predoplata-pri-zaklyuchenii-dogovora-na-remont-kvartiry/', 'blogs\\August2024\\IcR4VO2rsD8wvXiM90Zn.png', '2024-08-27 22:42:24', '2024-08-27 22:42:24'),
+(6, 'Выбор компании по ремонту квартир', 'Ремонт квартиры — процесс не простой, затратный. Важной целью становится найти компанию, которая способна выполнить качественный ремонт без привлечения сторонних специалистов, соблюдая все требуемые технологии,', 'https://remontpodkluch24.ru/vybor-kompanii-po-remontu-na-osnove-rejtinga-i-otzyvov/', 'blogs\\August2024\\OCmjZj1kHOq3ykizZgYZ.png', '2024-08-27 22:42:53', '2024-08-27 22:42:53'),
+(7, 'Качественная подготовка перед оштукатуриванием', 'Выравнивание стен — это серьезный этап в ремонте, который требует ответственного подхода. Не менее важна качественная подготовка перед оштукатуриванием поверхностей. В нашей статье мы подробно', 'https://remontpodkluch24.ru/pochemu-vazhno-kachestvenno-podgotavlivat-poverhnost-pered-oshtukaturivaniem/', 'blogs\\August2024\\4bz9pnrTilJ8vuwNcUDC.png', '2024-08-27 22:43:23', '2024-08-27 22:43:23'),
+(8, 'Стоимость ремонта квартиры?', 'Исходя из нашего опыта, невозможно озвучить цену, не посмотрев вживую объект и не проведя замеры. Поэтому на нашем сайте отсутствует калькулятор стоимости, указаны приблизительные расценки', 'https://remontpodkluch24.ru/kak-opredelyaetsya-stoimost-remonta-kvartiry/', 'blogs\\August2024\\GaEb7dFtXS9Oj45fJEGG.png', '2024-08-27 22:43:50', '2024-08-27 22:43:50'),
+(9, 'Нанесение гидроизоляции в санузле', 'В данной статье мы подробно расскажем почему важно и нужно применение гидроизоляции в помещениях где повышенная влажность, такие как ванная комната, туалет, кухня, балконы и', 'https://remontpodkluch24.ru/pochemu-nanesenie-gidroizolyaczii-v-sanuzle-vazhno-i-nuzhno/', 'blogs\\August2024\\6zcIpWmHEWuxABKQpCMa.png', '2024-08-27 22:44:18', '2024-08-27 22:44:18'),
+(10, 'Ремонт квартиры в зимний период времени', 'В данной статье мы подробно расскажем о преимуществах и недостатках ремонта квартиры в зимний период. Дадим ответы на частые вопросы Заказчиков о ремонте в зимний', 'https://remontpodkluch24.ru/remont-kvartiry-v-zimnij-period-vremeni-plyusy-i-minusy/', 'blogs\\August2024\\195WW9u1c17kacRdZQK9.png', '2024-08-27 22:44:42', '2024-08-27 22:44:42'),
+(11, 'Кому доверить ремонт квартиры?', 'При возникновении необходимости сделать ремонт квартиры, многие сталкиваются с вопросом кому доверить это сложное мероприятие, чтобы получить ожидаемый результат. В статье мы подробно расскажем на', 'https://remontpodkluch24.ru/remont-kvartiry/', 'blogs\\August2024\\5WuIJCE4P9QFuoNInP0s.png', '2024-08-27 22:45:06', '2024-08-27 22:45:06'),
+(12, 'Покупка чистовых и черновых материалов', 'Сегодня ассортимент строительных материалов очень разнообразен. Человеку, кто не сталкивался с ремонтом, трудно сориентироваться при покупке, так как качество и цены разные. Многие стараются приобретать', 'https://remontpodkluch24.ru/pokupka-chistovyh-i-chernovyh-materialov/', 'blogs\\August2024\\XZw7YEr3WyK9TSENd1ZB.png', '2024-08-27 22:45:32', '2024-08-27 22:45:32'),
+(13, 'Разновидности ремонта квартир', 'В нашей статье мы подробно расскажем про основные виды ремонта квартир. Какие виды ремонта бывают? В чем основные отличия и от чего зависит стоимость? Как', 'https://remontpodkluch24.ru/vidy-remonta-kvartir/', 'blogs\\August2024\\Ds0gYsrJg8sLNgsYzqxE.png', '2024-08-27 22:46:02', '2024-08-27 22:46:02'),
+(14, 'Технология выравнивания пола', 'Стяжка — это один из видов выравнивания пола. Исходя из текущего состояния помещения и предстоящего ремонта квартиры инженер подбирает вариант выравнивания. Стяжка пола относится к', 'https://remontpodkluch24.ru/tehnologiya-vyravnivaniya-pola/', 'blogs\\August2024\\ipAmflRAUh5lSk9iN9Aj.png', '2024-08-27 22:46:37', '2024-08-27 22:46:37'),
+(15, 'Сроки выполнения ремонта в квартире', 'Перед тем, как заказать ремонт, у каждого человека возникает вопрос: «Сколько будут продолжаться ремонтно-отделочные мероприятия и когда можно будет заселяться?» Длительность ремонта может зависеть от', 'https://remontpodkluch24.ru/sroki-vypolneniya-remonta-v-kvartire/', 'blogs\\August2024\\3ejs2RygNLWJUA3NLUq5.png', '2024-08-27 22:47:09', '2024-08-27 22:47:09'),
+(16, 'С чего начать ремонт в квартире?', 'Ремонт квартиры — это ответственный и сложный процесс, требующий тщательного планирования и профессионального подхода. Чтобы результаты работы радовали вас долгие годы, важно продумать каждый этап', 'https://remontpodkluch24.ru/s-chego-nachat-remont-v-kvartire/', 'blogs\\August2024\\aTm5AEUEO9O0Dqjfy0u0.png', '2024-08-27 22:47:44', '2024-08-27 22:47:44');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `blog_about_designs`
+--
+
+CREATE TABLE `blog_about_designs` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `url` text NOT NULL,
+  `img` text NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `blog_about_designs`
+--
+
+INSERT INTO `blog_about_designs` (`id`, `title`, `description`, `url`, `img`, `created_at`, `updated_at`) VALUES
+(1, 'Дизайн квартир в стиле лофт', 'Лофт — это стиль интерьера, который стремится создать эстетику индустриальной атмосферы в жилом пространстве. Главным принципом лофта является сохранение элементов промышленного дизайна, таких как открытые', 'https://remontpodkluch24.ru/dizajn-v-stile-loft/', 'blog-about-designs\\August2024\\5LdHNlbKUleCPFR1YNL5.jpg', '2024-08-27 23:07:47', '2024-08-27 23:07:47'),
+(2, 'Дизайн квартир в стиле неоклассика', 'Неоклассический стиль – это комбинация классических элементов и современных тенденций. Он имеет основные черты в виде симметричных форм, обильных украшений, деталей и использования материалов высокого', 'https://remontpodkluch24.ru/dizajn-v-stile-neoklassika/', 'blog-about-designs\\August2024\\zRFtEMgDT9mhpWQJ324H.jpg', '2024-08-27 23:10:24', '2024-08-27 23:10:24'),
+(3, 'Дизайн квартир в стиле бохо', 'Стиль бохо в — это смешение различных элементов дизайна, таких как этнические текстуры, узоры и цветовые сочетания. Бохо — это сочетание хиппи, этнического и бохемианского', 'https://remontpodkluch24.ru/dizajn-v-stile-boho/', 'blog-about-designs\\August2024\\GBkOZJWd0Sv0lEhtdKjI.jpg', '2024-08-27 23:10:49', '2024-08-27 23:10:49'),
+(4, 'Дизайн квартир в японском стиле', 'Японский стиль в интерьере квартиры – это эстетика, которая уделяет большое внимание упрощенной, минималистичной и функциональной практичности. Он воплощает в себе философию миролюбия, гармонии, уравновешенности,', 'https://remontpodkluch24.ru/dizajn-v-yaponskom-stile/', 'blog-about-designs\\August2024\\CH7iA4qSLvqh0bl4Xf6S.jpg', '2024-08-27 23:11:15', '2024-08-27 23:11:15'),
+(5, 'Дизайн квартир в стиле минимализм', 'Стиль минимализм в интерьере квартир уже давно завоевал популярность. В основе этого стиля лежит принцип минимума — максимума, что означает заниматься дизайном и оформлением комнат', 'https://remontpodkluch24.ru/dizajn-v-stile-minimalizm/', 'blog-about-designs\\August2024\\wKllHHnPAGX2agMTszpS.jpg', '2024-08-27 23:11:45', '2024-08-27 23:11:45'),
+(6, 'Дизайн квартир в скандинавском стиле', 'Скандинавский стиль интерьера произошел в странах Северной Европы, включая Данию, Финляндию, Норвегию, Швецию и Исландию, и существует уже более столетия. Главная цель этого стиля —', 'https://remontpodkluch24.ru/dizajn-v-skandinavskom-stile/', 'blog-about-designs\\August2024\\BM6qQjRqIkgGTSkfml1F.jpg', '2024-08-27 23:12:10', '2024-08-27 23:12:10'),
+(7, 'Дизайн квартир в стиле прованс', 'Прованский стиль сам по себе зародился в северной Франции семнадцатого века, где активно использовался как знатью, так и обычными гражданами. В этом веке люди начали', 'https://remontpodkluch24.ru/dizajn-kvartir-v-stile-provans/', 'blog-about-designs\\August2024\\6zprkKpWil0x9Yk37DTS.jpg', '2024-08-27 23:12:35', '2024-08-27 23:12:35'),
+(8, 'Дизайн квартире в эко стиле', 'Эко-стиль в интерьере квартиры – это популярное направление в современном дизайне и декоре, которое становится все более популярным среди тех, кто ценит природную красоту и', 'https://remontpodkluch24.ru/dizajn-kvartire-v-eko-stile/', 'blog-about-designs\\August2024\\hkNEXXRX7zNSW4LBzd9U.jpg', '2024-08-27 23:13:05', '2024-08-27 23:13:05');
 
 -- --------------------------------------------------------
 
@@ -135,7 +203,30 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (72, 12, 'url', 'text', 'Url', 1, 1, 1, 1, 1, 1, '{}', 5),
 (73, 12, 'adres', 'text', 'Adres', 1, 1, 1, 1, 1, 1, '{}', 3),
 (74, 12, 'area', 'text', 'Area', 1, 1, 1, 1, 1, 1, '{}', 8),
-(75, 12, 'description', 'text', 'Description', 0, 1, 1, 1, 1, 1, '{}', 9);
+(75, 12, 'description', 'text', 'Description', 0, 1, 1, 1, 1, 1, '{}', 9),
+(76, 16, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(77, 16, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, '{}', 2),
+(78, 16, 'adress', 'text', 'Adress', 0, 1, 1, 1, 1, 1, '{}', 3),
+(79, 16, 'description', 'text', 'Description', 0, 1, 1, 1, 1, 1, '{}', 4),
+(80, 16, 'url_foto', 'text', 'Url Foto', 0, 1, 1, 1, 1, 1, '{}', 5),
+(81, 16, 'url_design', 'text', 'Url Design', 0, 1, 1, 1, 1, 1, '{}', 6),
+(82, 16, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 7),
+(83, 16, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
+(84, 16, 'url_video', 'text', 'Url Video', 1, 1, 1, 1, 1, 1, '{}', 9),
+(92, 22, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(93, 22, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{}', 2),
+(94, 22, 'description', 'text', 'Description', 1, 1, 1, 1, 1, 1, '{}', 3),
+(95, 22, 'url', 'text', 'Url', 1, 1, 1, 1, 1, 1, '{}', 4),
+(96, 22, 'img', 'image', 'Img', 1, 1, 1, 1, 1, 1, '{}', 5),
+(97, 22, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 6),
+(98, 22, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 7),
+(99, 24, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(100, 24, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{}', 2),
+(101, 24, 'description', 'text', 'Description', 1, 1, 1, 1, 1, 1, '{}', 3),
+(102, 24, 'url', 'text', 'Url', 1, 1, 1, 1, 1, 1, '{}', 4),
+(103, 24, 'img', 'image', 'Img', 1, 1, 1, 1, 1, 1, '{}', 5),
+(104, 24, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 6),
+(105, 24, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 7);
 
 -- --------------------------------------------------------
 
@@ -172,7 +263,11 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (4, 'categories', 'categories', 'Category', 'Categories', 'voyager-categories', 'TCG\\Voyager\\Models\\Category', NULL, '', '', 1, 0, NULL, '2024-08-19 07:21:39', '2024-08-19 07:21:39'),
 (5, 'posts', 'posts', 'Post', 'Posts', 'voyager-news', 'TCG\\Voyager\\Models\\Post', 'TCG\\Voyager\\Policies\\PostPolicy', '', '', 1, 0, NULL, '2024-08-19 07:21:39', '2024-08-19 07:21:39'),
 (6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, '', '', 1, 0, NULL, '2024-08-19 07:21:40', '2024-08-19 07:21:40'),
-(12, 'works', 'works', 'Work', 'Наши работы', 'voyager-window-list', 'App\\Models\\Work', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2024-08-20 21:57:55', '2024-08-23 00:29:56');
+(12, 'works', 'works', 'Work', 'Наши работы', 'voyager-window-list', 'App\\Models\\Work', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2024-08-20 21:57:55', '2024-08-23 00:29:56'),
+(13, 'video_otchety', 'video-otchety', 'Видео отчет', 'Видео отчеты', NULL, 'App\\Models\\Video_otchety', NULL, NULL, NULL, 1, 1, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2024-08-27 19:53:51', '2024-08-27 19:53:51'),
+(16, 'video_otcheties', 'video-otcheties', 'Видео отчет', 'Видео отчеты', NULL, 'App\\Models\\VideoOtchety', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2024-08-27 19:59:13', '2024-08-27 19:59:13'),
+(22, 'blogs', 'blogs', 'Blog', 'Блог', NULL, 'App\\Models\\Blog', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2024-08-27 21:58:01', '2024-08-27 21:58:01'),
+(24, 'blog_about_designs', 'blog-about-designs', 'Blog About Design', 'Блог о дизайне', NULL, 'App\\Models\\blog_about_designs', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2024-08-27 23:02:26', '2024-08-27 23:02:26');
 
 -- --------------------------------------------------------
 
@@ -241,16 +336,19 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 4, '2024-08-19 07:21:26', '2024-08-20 22:00:22', 'voyager.media.index', NULL),
 (3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 3, '2024-08-19 07:21:26', '2024-08-19 07:21:26', 'voyager.users.index', NULL),
 (4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 2, '2024-08-19 07:21:26', '2024-08-19 07:21:26', 'voyager.roles.index', NULL),
-(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 9, '2024-08-19 07:21:26', '2024-08-19 07:21:26', NULL, NULL),
+(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 12, '2024-08-19 07:21:26', '2024-08-27 23:02:46', NULL, NULL),
 (6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 1, '2024-08-19 07:21:26', '2024-08-20 22:00:22', 'voyager.menus.index', NULL),
 (7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 2, '2024-08-19 07:21:26', '2024-08-20 22:00:22', 'voyager.database.index', NULL),
 (8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 3, '2024-08-19 07:21:26', '2024-08-20 22:00:22', 'voyager.compass.index', NULL),
 (9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 4, '2024-08-19 07:21:26', '2024-08-20 22:00:22', 'voyager.bread.index', NULL),
-(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 10, '2024-08-19 07:21:26', '2024-08-20 22:00:22', 'voyager.settings.index', NULL),
-(11, 1, 'Categories', '', '_self', 'voyager-categories', NULL, NULL, 8, '2024-08-19 07:21:39', '2024-08-19 07:21:39', 'voyager.categories.index', NULL),
+(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 13, '2024-08-19 07:21:26', '2024-08-27 23:02:46', 'voyager.settings.index', NULL),
+(11, 1, 'Categories', '', '_self', 'voyager-categories', NULL, NULL, 11, '2024-08-19 07:21:39', '2024-08-27 23:02:46', 'voyager.categories.index', NULL),
 (12, 1, 'Posts', '', '_self', 'voyager-news', NULL, NULL, 5, '2024-08-19 07:21:40', '2024-08-20 22:00:22', 'voyager.posts.index', NULL),
 (13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 6, '2024-08-19 07:21:40', '2024-08-20 22:00:22', 'voyager.pages.index', NULL),
-(15, 1, 'Наши работы', '', '_self', NULL, NULL, NULL, 7, '2024-08-20 21:57:55', '2024-08-20 22:00:22', 'voyager.works.index', NULL);
+(15, 1, 'Наши работы', '', '_self', NULL, NULL, NULL, 7, '2024-08-20 21:57:55', '2024-08-20 22:00:22', 'voyager.works.index', NULL),
+(17, 1, 'Видео отчеты', '', '_self', NULL, NULL, NULL, 8, '2024-08-27 19:59:13', '2024-08-27 20:20:53', 'voyager.video-otcheties.index', NULL),
+(23, 1, 'Блог', '', '_self', NULL, NULL, NULL, 9, '2024-08-27 21:58:01', '2024-08-27 21:58:23', 'voyager.blogs.index', NULL),
+(25, 1, 'Блог о дизайне', '', '_self', NULL, '#000000', NULL, 10, '2024-08-27 23:02:26', '2024-08-27 23:03:18', 'voyager.blog-about-designs.index', 'null');
 
 -- --------------------------------------------------------
 
@@ -375,7 +473,10 @@ INSERT INTO `pages` (`id`, `author_id`, `title`, `excerpt`, `body`, `image`, `sl
 (40, 2, 'Стяжка пола', 'styazhka-pola', '<div class=\"container my-5\">\r\n<p class=\"lead fs-5\">Выполняем выравнивание пола в Красноярске с соблюдением технологий. Выравнивание пола &mdash; это очень важный этап при проведении ремонта квартиры, который требует профессионального подхода и знания строительных технических норм.</p>\r\n<p class=\"lead fs-5\">Для того чтобы достичь желаемого результата важно соблюдать все правила, порядок производимых работ и использовать качественный материал.</p>\r\n<p class=\"lead fs-5\">Любой чистовой декоративный материал требует идеально подготовленную поверхность, поэтому первым делом нужно исправить изъяны и грамотно подготовить базу.</p>\r\n<h2 class=\"text-center text-danger fw-bold mb-4\">Цены и прайс на выравнивание пола в Красноярске</h2>\r\n<table class=\"table table-bordered fs-5\">\r\n<thead>\r\n<tr>\r\n<th class=\"text-center\" scope=\"col\">Вид работ</th>\r\n<th class=\"text-center\" scope=\"col\">Цена за кв. м.</th>\r\n</tr>\r\n</thead>\r\n<tbody>\r\n<tr>\r\n<td class=\"text-center\">Демонтаж старой стяжки</td>\r\n<td class=\"text-center\">от 300 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Подготовка основания</td>\r\n<td class=\"text-center\">от 150 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Гидроизоляция</td>\r\n<td class=\"text-center\">от 250 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Монтаж демпферной ленты</td>\r\n<td class=\"text-center\">от 80 за п. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Засыпка керамзита</td>\r\n<td class=\"text-center\">от 100 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Армирование пола с обвязкой</td>\r\n<td class=\"text-center\">от 350 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Стяжка 30 мм</td>\r\n<td class=\"text-center\">от 700 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Стяжка 50 мм</td>\r\n<td class=\"text-center\">от 850 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Стяжка свыше 50 мм</td>\r\n<td class=\"text-center\">от 950 за кв. м.</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p class=\"text-center mt-4\"><strong>Точная стоимость выравнивания пола определяется инженером-сметчиком на месте после осмотра и консультации.</strong></p>\r\n</div>\r\n<div class=\"container my-5\">\r\n<h2 class=\"text-center text-danger fw-bold mb-4\">Виды стяжки пола</h2>\r\n<p class=\"lead fs-5\">Технология выравнивания пола выбирается исходя из следующих факторов:</p>\r\n<ul class=\"lead fs-5\">\r\n<li>вторичное жилье или новостройка;</li>\r\n<li>квартира или нежилое помещение;</li>\r\n<li>деревянное или бетонное перекрытие.</li>\r\n</ul>\r\n<h3 class=\"text-danger fw-bold my-4\">Стяжка пола до 3 см</h3>\r\n<p class=\"lead fs-5\">Стяжка такой толщины в основном актуальна в квартирах в новостройках, т.е. домах находящихся в эксплуатации не больше 10 лет. Необходимость прибегать к такому виду выравнивания обусловлена обязательной заменой полуусохлой стяжки, в случае если появляются признаки нарушения целостности или слой просто отходит от основания. Но это скорее исключение, поскольку в домах нового фонда редко возникают проблемы черновым полом от застройщика и вполне можно обойтись самовыравнивающимся наливным раствором.</p>\r\n<h3 class=\"text-danger fw-bold my-4\">Стяжка пола от 4 см</h3>\r\n<p class=\"lead fs-5\">Данная технология выполняется при выполнении капитального ремонта во вторичной квартире. Стяжка заливается на керамзитную подушку и обязательно армируется, чтобы избежать появления трещин. Если необходимо выводить пол в уровень, применяются маяки. Важно отметить, что их необходимо демонтировать, иначе со временем в местах расположения маяков появятся трещины. Толщина керамзитной подушки и стяжки определяется после осмотра помещения и определения перепада с помощью лазерного уровня.</p>\r\n<div class=\"alert alert-danger my-4\" role=\"alert\">Керамзит имеет очень хорошие шумо- и теплоизоляционные свойства, не боится низких температур. Применение керамзита поможет сократить затраты на черновой материал.</div>\r\n<h3 class=\"text-danger fw-bold my-4\">Стяжка пола свыше 8-10 см</h3>\r\n<p class=\"lead fs-5\">Такой слой обычно выполняется, где на пол будет очень высокая нагрузка, например в нежилом помещении или в гараже.</p>\r\n<h3 class=\"text-danger fw-bold my-4\">Сухая стяжка</h3>\r\n<p class=\"lead fs-5\">Применяется в старых домах с деревянными перекрытиями. Для такого выравнивания используется керамзит или ГВЛ. В настоящее время можно приобрести Супер пол от Knauf.</p>\r\n<h2 class=\"text-center text-danger fw-bold mb-4\">Последовательность работ по устройству чернового пола</h2>\r\n<ul class=\"lead fs-5\">\r\n<li>полный демонтаж до основания;</li>\r\n<li>подготовка, обеспыливание, ремонт основания (если требуется) и заделка сквозных отверстий, чтобы раствор не просочился к соседям;</li>\r\n<li>монтаж демпферной ленты, для компенсации нагрузки на стены;</li>\r\n<li>гидроизоляция, обязательно выполняется в помещении с повышенной влажностью (санузел, кухня);</li>\r\n<li>засыпка керамзитной подушки;</li>\r\n<li>укладка армировочной сетки с последующей обвязкой;</li>\r\n<li>заливка стяжки.</li>\r\n</ul>\r\n<div class=\"alert alert-danger my-4\" role=\"alert\">Для того чтобы улучшить прочность чернового пола, необходимо ежедневно проливать стяжку водой и накрывать полиэтиленом. По итогу получится высокопрочное и долговечное основание.</div>\r\n<p class=\"lead fs-5\">Подробнее о технологии выравнивания и разновидностях стяжки Вы можете почитать в нашей <a class=\"text-success text-decoration-none\" href=\"#\">статье</a>.</p>\r\n</div>', NULL, 'styazhka-pola', 'styazhka-pola', 'styazhka-pola', 'ACTIVE', '2024-08-27 05:51:06', '2024-08-27 06:18:51'),
 (41, 2, 'Наливной пол', 'ustrojstvo-nalivnogo-pola', '<div class=\"container my-5\">\r\n<p class=\"fs-5 lead\">Устройство наливного пола &mdash; это один из этапов в процессе выравнивания пола. Относится к финишной подготовке перед укладкой напольного покрытия. Применяется при ремонте квартир, как в новостройках, так и во вторичном жилье. Многие разновидности напольного покрытия требуют идеально подготовленную и ровную поверхность, в этом случае самонивелирующаяся наливная смесь &mdash; это идеальное решение.</p>\r\n<h2 class=\"text-center text-danger fw-bold mb-4\">Цены и прайс на устройство наливного пола в Красноярске</h2>\r\n<table class=\"table table-bordered fs-5\">\r\n<thead>\r\n<tr>\r\n<th style=\"text-align: center;\" scope=\"col\">Услуга</th>\r\n<th style=\"text-align: center;\" scope=\"col\">Стоимость</th>\r\n</tr>\r\n</thead>\r\n<tbody>\r\n<tr>\r\n<td class=\"text-center\">Демонтаж напольного покрытия</td>\r\n<td class=\"text-center\">от 50 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Подготовка основания пола</td>\r\n<td class=\"text-center\">от 150 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Грунтовка пола</td>\r\n<td class=\"text-center\">от 60 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Монтаж демпферной ленты</td>\r\n<td class=\"text-center\">от 80 за п. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Устройство наливного пола</td>\r\n<td class=\"text-center\">от 300 за кв. м.</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p class=\"fs-5 lead text-center\">Точная стоимость определяется инженером после осмотра помещения и составления комплекса ремонтно-отделочных работ.</p>\r\n<h3 class=\"text-center text-danger fw-bold mb-4\">Технология устройства наливного пола</h3>\r\n<p class=\"fs-5 lead\">Главное преимущество наливной смеси &mdash; это выравнивание до идеально гладкой и ровной поверхности. Важным условием получения такого результата будет правильно выполненная стяжка, в противном случае наливной пол повторит все неровности.</p>\r\n<p class=\"fs-5 lead\">При выявлении неровностей основания с большими перепадами, лучше отказаться заливки наливной смеси, так как потребуется большой расход материала, а результат не оправдает ожидания. В таком случае лучше выровнять основание стяжкой и поверх тонким слоем сделать наливной пол.</p>\r\n<h3 class=\"text-center text-danger fw-bold mb-4\">Последовательность выполнения</h3>\r\n<p class=\"fs-5 lead\">В первую очередь, важно начать с осмотра текущего состояния пола, выявление неровностей и возможных изъянов. При выявлении неровностей основания с большими перепадами, лучше отказаться заливки наливной смеси, так как потребуется большой расход материала, а результат не оправдает ожидания. В таком случае лучше выровнять основание грубым ровнителем и поверх тонким слоем сделать наливной пол. Подробнее о <a class=\"text-success text-decoration-none\" href=\"#\">технологии стяжки пола</a> можно ознакомиться на сайте.</p>\r\n<p class=\"fs-5 lead\">Если же основание качественное, то следует приступить к подготовке, которая включает:</p>\r\n<ul class=\"fs-5 lead\">\r\n<li>обеспыливание поверхности и очистка от пятен;</li>\r\n<li>монтаж демпферной ленты по периметру.</li>\r\n</ul>\r\n<p class=\"fs-5 lead\">После всех подготовительных мероприятий переходим к устройству самовыравнивающегося наливного пола.</p>\r\n<div class=\"alert alert-danger mt-4 fs-5 lead\">Обращаем внимание, при разведении сухой смеси важно строго следовать инструкции от производителя. Любое отклонение от инструкции может привести к негативным последствиям.</div>\r\n<p class=\"fs-5 lead\">После определения необходимого слоя с помощью лазерного нивелира, разводится раствор и заливается на пол, распределяется по поверхности с помощью специального игольчатого валика.</p>\r\n<p class=\"fs-5 lead\">Высыхание поверхности происходит быстро, в зависимости от состава ходить по полу можно будет уже через 4-12 часов. После того как состав затвердел, выполняется подрезка демпферной ленты.</p>\r\n</div>\r\n<div class=\"container my-5\">\r\n<div class=\"ratio ratio-16x9\"><iframe class=\"mx-auto\" title=\"Технология устройства самовыравнивающегося наливного пола\" src=\"https://www.youtube.com/embed/i9krE93BXoQ\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen=\"allowfullscreen\"></iframe></div>\r\n</div>', NULL, 'ustrojstvo-nalivnogo-pola', 'ustrojstvo-nalivnogo-pola', 'ustrojstvo-nalivnogo-pola', 'ACTIVE', '2024-08-27 06:20:20', '2024-08-27 06:31:21'),
 (42, 2, 'Укладка ленолиума', 'ukladka-linoleuma', '<div class=\"container my-5\">\r\n<p class=\"fs-5 lead\">Укладка линолеума в квартире не теряет популярности несмотря на появление новых разновидностей напольного покрытия. В настоящее время технические характеристики линолеума улучшились, появились новые фактуры и широкий спектр цветовых решений. Как и любое другое напольное покрытие линолеумное покрытие требует правильной подготовки поверхности пола.</p>\r\n<div class=\"text-center\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/room/nastil-linoleuma-ot-kompanii-ip-pokivajlov-768x563.jpg\" alt=\"Рулон линолеума\"></div>\r\n</div>\r\n<div class=\"container my-5\">\r\n<h2 class=\"text-center text-danger fw-bold mb-4\">Линолеум в интерьере квартиры</h2>\r\n<p class=\"fs-5 lead\">Применение линолеумного покрытия в дизайне интерьера не теряет своей актуальности благодаря интересным современным расцветкам и реалистичным фактурам под дерево, мрамор и камень. Прошло то время, когда данное напольное покрытие применялось с целью экономии и имел малопривлекательный внешний вид. В последнее время износостойкость и внешние характеристики не очень отличаются от других популярных разновидностей напольного покрытия. Среди большого разнообразия всегда найдется вариант, который идеально впишется в Ваш интерьер.</p>\r\n<div class=\"text-center\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/room/linoleum-v-interere-kvartiry-768x563.jpg\" alt=\"Линолеум в интерьере квартиры\"></div>\r\n</div>\r\n<div class=\"container my-5\">\r\n<h2 class=\"text-center text-danger fw-bold mb-4 fs-5 lead\">Цена на укладку линолеума в Красноярске</h2>\r\n<table class=\"table table-bordered\">\r\n<thead>\r\n<tr>\r\n<th style=\"text-align: center;\">Наименование работ</th>\r\n<th style=\"text-align: center;\">Цена</th>\r\n</tr>\r\n</thead>\r\n<tbody>\r\n<tr>\r\n<td class=\"text-center\">Подготовка основания пола</td>\r\n<td class=\"text-center\">от 100 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Стяжка пола</td>\r\n<td class=\"text-center\">от 1000 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Устройство самовыравнивающегося наливного пола</td>\r\n<td class=\"text-center\">от 450 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Настил бытового линолеума</td>\r\n<td class=\"text-center\">от 250 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Настил полукоммерческого линолеума</td>\r\n<td class=\"text-center\">от 300 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Монтаж напольного плинтуса (пластик)</td>\r\n<td class=\"text-center\">от 180 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td class=\"text-center\">Монтаж напольного порожка</td>\r\n<td class=\"text-center\">от 400 за шт.</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n<div class=\"container my-5\">\r\n<h2 class=\"text-center text-danger fw-bold mb-4 fs-5 lead\">Технология настила линолеума</h2>\r\n<p class=\"fs-5 lead\">После подготовки полов мы приступаем к укладке.</p>\r\n<ul class=\"fs-5 lead\">\r\n<li>Прежде всего необходимо раскатать рулон и дать ему отлежаться не менее 12 часов, чтобы он распрямился.</li>\r\n<li>Важно четко рассчитать все углы и выступы, чтобы при подрезке не допустить ошибок.</li>\r\n<li>Если площадь комнаты свыше 22 м<sup>2</sup> рекомендуется приклеить линолеум специальным клеем.</li>\r\n<li>При маленькой площади комнаты достаточно смонтировать напольный плинтус по периметру.</li>\r\n<li>Если линолеум предстоит укладывать из нескольких частей, то можно прибегнуть к холодной сварке на стыке частей линолеумного покрытия, чтобы не было видно стык.</li>\r\n</ul>\r\n</div>\r\n<div class=\"container my-5\">\r\n<h2 class=\"text-center text-danger fw-bold mb-4\">Приобретение линолеума и сопутствующих материалов</h2>\r\n<p class=\"fs-5 lead\">&mdash; При приобретении линолеума, очень важно правильно рассчитать площадь покрытия с учетом всех подрезок, нужно понимать, что если допустить ошибку в расчетах, то либо придется покупать новое полотно, либо собирать из нескольких частей.</p>\r\n<p class=\"fs-5 lead\">&mdash; В магазинах продается линолеумное покрытие шириной от 1,5-4 метров, но некоторые производители изготавливают с шириной 5 метров.</p>\r\n<p class=\"fs-5 lead\">&mdash; Важно помнить, что если на покрытии изображен сложный рисунок, то не избежать большого количества подрезки, поэтому нужно позаботиться о запасе.</p>\r\n<p class=\"fs-5 lead\">&mdash; При покупке нужно учесть обязательный запас по ширине 5-7 см, после укладки выполняется подрезка.</p>\r\n<p class=\"fs-5 lead\">&mdash; При покупке необходимо обращать внимание на назначение линолеума и на технические эксплуатационные характеристики, потому что не все разновидности подойдут для укладки в квартиру, тем более в спальню или детскую комнату.</p>\r\n<div class=\"row mt-4\">\r\n<div class=\"col-lg-8\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/room/pokupka-linoleuma.-komplektacziya-ot-kompanii-ip-pokivajlov-768x563.jpg\" alt=\"Линолеум на витрине\"></div>\r\n<div class=\"col-lg-4 d-flex align-items-center\">\r\n<div class=\"p-3 border\">\r\n<p class=\"fs-5 lead\">Наша компания оказывает услуги по ремонту квартир в Красноярске. Мастера компании ИП Покивайлов осуществляют профессиональную укладку линолеума любой сложности.</p>\r\n<p class=\"fs-5 lead\">Рекомендуем Вам воспользоваться услугой по комплектации чистовыми материалами. Данная услуга оказывается совершенно бесплатно.</p>\r\n<button class=\"btn btn-success btn-lg w-100\">Заказать</button></div>\r\n</div>\r\n</div>\r\n</div>', NULL, 'ukladka-linoleuma', 'ukladka-linoleuma', 'ukladka-linoleuma', 'ACTIVE', '2024-08-27 06:36:20', '2024-08-27 06:42:49'),
-(43, 2, 'Укладка ламината', 'ukladka-laminata-2', '<div class=\"container\">\r\n<p class=\"fs-5 lead\">Укладка ламината в квартире &mdash; популярная услуга по отделке пола. Как материал, ламинат имеет достаточно презентабельный вид, разные варианты оттенков и фактур и может стать идеальной альтернативой паркету. Ламинат, как и любое другое напольное покрытие, требует проведения правильной подготовки поверхности пола перед укладкой.</p>\r\n<h2 class=\"text-center text-danger fw-bold mb-4\">Ламинат в интерьере квартиры</h2>\r\n<p class=\"fs-5 lead\">Разрабатывая дизайн проект квартиры, дизайнеры достаточно часто отдают предпочтение ламинату. Стоит отметить, что ламинат используется не только как напольное покрытие, но и для облицовки стен. Существует немало дизайнерских стилей, где применяется ламинат. Помимо разнообразия текстур, ламинат можно укладывать разными способами, что также привнесет изюминку в любой интерьер квартиры, дома или нежилого помещения.</p>\r\n<h3 class=\"text-center text-danger fw-bold mb-4\">Цена на укладку ламината в Красноярске</h3>\r\n<div class=\"row text-center\">\r\n<div class=\"col-12 col-sm-6 col-md-4 mb-4\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/room/pryamaya-ukladka-laminata-298x300.png\" alt=\"Классическая укладка\">\r\n<p>Классическая укладка</p>\r\n<p>от 500 руб/м.кв.</p>\r\n</div>\r\n<div class=\"col-12 col-sm-6 col-md-4 mb-4\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/room/kirpichnaya-kladka-laminata-300x300.png\" alt=\"Укладка в стиле кирпичная кладка\">\r\n<p>Укладка в стиле &laquo;кирпичная кладка&raquo;</p>\r\n<p>от 600 руб/м.кв.</p>\r\n</div>\r\n<div class=\"col-12 col-sm-6 col-md-4 mb-4\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/room/palubnaya-ukladka-laminata-300x300.png\" alt=\"Палубная укладка\">\r\n<p>Палубная укладка</p>\r\n<p>от 600 руб/м.кв.</p>\r\n</div>\r\n</div>\r\n<div class=\"row text-center\">\r\n<div class=\"col-12 col-sm-6 col-md-4 mb-4\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/room/ukladka-laminata-kvadratom-298x300.png\" alt=\"Укладка квадратом\">\r\n<p>Укладка квадратом</p>\r\n<p>от 750 руб/м.кв.</p>\r\n</div>\r\n<div class=\"col-12 col-sm-6 col-md-4 mb-4\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/room/diagonalnaya-ukladka-laminata-300x300.png\" alt=\"Укладка по диагонали\">\r\n<p>Укладка по диагонали</p>\r\n<p>от 750 руб/м.кв.</p>\r\n</div>\r\n<div class=\"col-12 col-sm-6 col-md-4 mb-4\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/room/ukladka-laminata-elochkoj-300x300.png\" alt=\"Укладка ёлочкой\">\r\n<p>Укладка ёлочкой</p>\r\n<p>от 1000 руб/м.кв.</p>\r\n</div>\r\n</div>\r\n<p class=\"text-center lead fs-5\">Фигурная укладка ламината подразумевает увеличение количества приобретаемого ламината, так как при укладке производится подрезка и потребуется запас.</p>\r\n</div>\r\n<div class=\"container\">\r\n<h2 class=\"text-center text-danger fw-bold mb-4\">Стоимость на услуги по подготовке пола</h2>\r\n<table class=\"table table-bordered fs-5 lead\">\r\n<thead>\r\n<tr>\r\n<th scope=\"col\">Услуга</th>\r\n<th scope=\"col\">Стоимость</th>\r\n</tr>\r\n</thead>\r\n<tbody>\r\n<tr>\r\n<td>Монтаж демпферной ленты</td>\r\n<td>от 80 за м. п.</td>\r\n</tr>\r\n<tr>\r\n<td>Устройство наливного пола</td>\r\n<td>от 300 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td>Укладка ламината с подложкой</td>\r\n<td>от 500 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td>Монтаж напольного плинтуса (пластик)</td>\r\n<td>от 200 за м. п.</td>\r\n</tr>\r\n<tr>\r\n<td>Монтаж порожка</td>\r\n<td>от 400 за м. п.</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<h2 class=\"text-center text-danger fw-bold mb-4\">Приобретение ламината в магазинах Красноярска</h2>\r\n<div class=\"row\">\r\n<div class=\"col-md-6 d-flex justify-content-center\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/room/priobretenie-laminata-225x300.jpg\" alt=\"Ламинат\"></div>\r\n<div class=\"col-md-6\">\r\n<p class=\"fs-5 lead text-success\">Закажите ремонт квартиры под ключ - комплектация материалами в подарок</p>\r\n<p class=\"fs-5 lead\">Менеджер по комплектации, не только поможет Вам выбрать ламинатную доску по фактуре и цвету, но и подскажет каким техническим характеристикам стоит отдать предпочтение для того или иного помещения, чтобы напольное покрытие прослужило долгое годы.</p>\r\n<p class=\"fs-5 lead\">Также подберет наиболее подходящий вариант напольного плинтуса.</p>\r\n</div>\r\n</div>\r\n<div class=\"alert alert-info mt-4 fs-5 lead\" role=\"alert\">Чтобы узнать точную стоимость предстоящего ремонта, рекомендуем пригласить нашего инженера для осмотра и консультации. Если Вы желаете ремонт по дизайн-проекту, наши дизайнеры разработают для Вас дизайн интерьера исходя из Ваших пожеланий и предпочтений.</div>\r\n</div>', NULL, 'ukladka-laminata-2', 'ukladka-laminata-2', 'ukladka-laminata-2', 'ACTIVE', '2024-08-27 06:41:46', '2024-08-27 06:54:31');
+(43, 2, 'Укладка ламината', 'ukladka-laminata-2', '<div class=\"container\">\r\n<p class=\"fs-5 lead\">Укладка ламината в квартире &mdash; популярная услуга по отделке пола. Как материал, ламинат имеет достаточно презентабельный вид, разные варианты оттенков и фактур и может стать идеальной альтернативой паркету. Ламинат, как и любое другое напольное покрытие, требует проведения правильной подготовки поверхности пола перед укладкой.</p>\r\n<h2 class=\"text-center text-danger fw-bold mb-4\">Ламинат в интерьере квартиры</h2>\r\n<p class=\"fs-5 lead\">Разрабатывая дизайн проект квартиры, дизайнеры достаточно часто отдают предпочтение ламинату. Стоит отметить, что ламинат используется не только как напольное покрытие, но и для облицовки стен. Существует немало дизайнерских стилей, где применяется ламинат. Помимо разнообразия текстур, ламинат можно укладывать разными способами, что также привнесет изюминку в любой интерьер квартиры, дома или нежилого помещения.</p>\r\n<h3 class=\"text-center text-danger fw-bold mb-4\">Цена на укладку ламината в Красноярске</h3>\r\n<div class=\"row text-center\">\r\n<div class=\"col-12 col-sm-6 col-md-4 mb-4\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/room/pryamaya-ukladka-laminata-298x300.png\" alt=\"Классическая укладка\">\r\n<p>Классическая укладка</p>\r\n<p>от 500 руб/м.кв.</p>\r\n</div>\r\n<div class=\"col-12 col-sm-6 col-md-4 mb-4\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/room/kirpichnaya-kladka-laminata-300x300.png\" alt=\"Укладка в стиле кирпичная кладка\">\r\n<p>Укладка в стиле &laquo;кирпичная кладка&raquo;</p>\r\n<p>от 600 руб/м.кв.</p>\r\n</div>\r\n<div class=\"col-12 col-sm-6 col-md-4 mb-4\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/room/palubnaya-ukladka-laminata-300x300.png\" alt=\"Палубная укладка\">\r\n<p>Палубная укладка</p>\r\n<p>от 600 руб/м.кв.</p>\r\n</div>\r\n</div>\r\n<div class=\"row text-center\">\r\n<div class=\"col-12 col-sm-6 col-md-4 mb-4\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/room/ukladka-laminata-kvadratom-298x300.png\" alt=\"Укладка квадратом\">\r\n<p>Укладка квадратом</p>\r\n<p>от 750 руб/м.кв.</p>\r\n</div>\r\n<div class=\"col-12 col-sm-6 col-md-4 mb-4\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/room/diagonalnaya-ukladka-laminata-300x300.png\" alt=\"Укладка по диагонали\">\r\n<p>Укладка по диагонали</p>\r\n<p>от 750 руб/м.кв.</p>\r\n</div>\r\n<div class=\"col-12 col-sm-6 col-md-4 mb-4\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/room/ukladka-laminata-elochkoj-300x300.png\" alt=\"Укладка ёлочкой\">\r\n<p>Укладка ёлочкой</p>\r\n<p>от 1000 руб/м.кв.</p>\r\n</div>\r\n</div>\r\n<p class=\"text-center lead fs-5\">Фигурная укладка ламината подразумевает увеличение количества приобретаемого ламината, так как при укладке производится подрезка и потребуется запас.</p>\r\n</div>\r\n<div class=\"container\">\r\n<h2 class=\"text-center text-danger fw-bold mb-4\">Стоимость на услуги по подготовке пола</h2>\r\n<table class=\"table table-bordered fs-5 lead\">\r\n<thead>\r\n<tr>\r\n<th scope=\"col\">Услуга</th>\r\n<th scope=\"col\">Стоимость</th>\r\n</tr>\r\n</thead>\r\n<tbody>\r\n<tr>\r\n<td>Монтаж демпферной ленты</td>\r\n<td>от 80 за м. п.</td>\r\n</tr>\r\n<tr>\r\n<td>Устройство наливного пола</td>\r\n<td>от 300 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td>Укладка ламината с подложкой</td>\r\n<td>от 500 за кв. м.</td>\r\n</tr>\r\n<tr>\r\n<td>Монтаж напольного плинтуса (пластик)</td>\r\n<td>от 200 за м. п.</td>\r\n</tr>\r\n<tr>\r\n<td>Монтаж порожка</td>\r\n<td>от 400 за м. п.</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<h2 class=\"text-center text-danger fw-bold mb-4\">Приобретение ламината в магазинах Красноярска</h2>\r\n<div class=\"row\">\r\n<div class=\"col-md-6 d-flex justify-content-center\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/room/priobretenie-laminata-225x300.jpg\" alt=\"Ламинат\"></div>\r\n<div class=\"col-md-6\">\r\n<p class=\"fs-5 lead text-success\">Закажите ремонт квартиры под ключ - комплектация материалами в подарок</p>\r\n<p class=\"fs-5 lead\">Менеджер по комплектации, не только поможет Вам выбрать ламинатную доску по фактуре и цвету, но и подскажет каким техническим характеристикам стоит отдать предпочтение для того или иного помещения, чтобы напольное покрытие прослужило долгое годы.</p>\r\n<p class=\"fs-5 lead\">Также подберет наиболее подходящий вариант напольного плинтуса.</p>\r\n</div>\r\n</div>\r\n<div class=\"alert alert-info mt-4 fs-5 lead\" role=\"alert\">Чтобы узнать точную стоимость предстоящего ремонта, рекомендуем пригласить нашего инженера для осмотра и консультации. Если Вы желаете ремонт по дизайн-проекту, наши дизайнеры разработают для Вас дизайн интерьера исходя из Ваших пожеланий и предпочтений.</div>\r\n</div>', NULL, 'ukladka-laminata-2', 'ukladka-laminata-2', 'ukladka-laminata-2', 'ACTIVE', '2024-08-27 06:41:46', '2024-08-27 06:54:31'),
+(44, 2, 'Видео отчеты', 'video-otchety-o-prodelannoj-rabote', NULL, NULL, 'video-otchety-o-prodelannoj-rabote', 'video-otchety-o-prodelannoj-rabote', 'video-otchety-o-prodelannoj-rabote', 'ACTIVE', '2024-08-27 20:02:44', '2024-08-27 20:02:44'),
+(45, 2, 'Блог', 'blog', '<div class=\"container my-5\">\r\n<div class=\"row align-items-center\"><!-- Текстовый блок -->\r\n<div class=\"col-md-8\">\r\n<h3 class=\"text-danger fw-bold\">Полезные статьи о ремонте квартир</h3>\r\n<p class=\"fs-5 lead\">Ремонт часто вызывает много вопросов у Заказчиков. Мы подготовили статьи и полезные советы.</p>\r\n<p class=\"fs-5 lead\"><strong>&mdash; О применяемых ремонтных технологиях:</strong></p>\r\n<p class=\"fs-5 lead\">Вся собранная информация основывается на опыте наших лучших специалистов, которые подробно расскажут и продемонстрируют технологии, применяемые в нашей работе и гарантирующие качественный результат.</p>\r\n<p class=\"fs-5 lead\"><strong>&mdash; Об отделочных чистовых и черновых материалах:</strong></p>\r\n<p class=\"fs-5 lead\">В нашей сфере регулярно появляются новые материалы, которые быстро находят свое применение. Совершенствуется качество, увеличивается срок службы, появляется возможность сэкономить не в ущерб качеству.</p>\r\n<p class=\"fs-5 lead\"><strong>&mdash; Дополнительно собрана важная и полезная информация для Заказчиков:</strong></p>\r\n<p class=\"fs-5 lead\">Мы подготовили материалы, которые помогут ответить на самые распространенные вопросы, связанные с деятельностью организации, документацией и так далее. Вы сможете посмотреть видео с обзором, посвященные технологиям демонтажа, подготовки, черновой и чистовой отделки. Все видео сняты в процессе работы на реальных объектах.</p>\r\n</div>\r\n<!-- Изображение -->\r\n<div class=\"col-md-4\"><img class=\"img-fluid\" src=\"http://127.0.0.1:8000/img/blog/банер1-new.png\" alt=\"Скидка на ремонт\"></div>\r\n</div>\r\n</div>', NULL, 'blog', 'blog', 'blog', 'ACTIVE', '2024-08-27 21:42:16', '2024-08-27 22:54:09'),
+(46, 2, 'Блог о дизайне', 'o-dizajne', NULL, NULL, 'o-dizajne', 'o-dizajne', 'o-dizajne', 'ACTIVE', '2024-08-27 22:56:07', '2024-08-27 22:56:07');
 
 -- --------------------------------------------------------
 
@@ -452,7 +553,27 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (47, 'read_works', 'works', '2024-08-20 21:57:55', '2024-08-20 21:57:55'),
 (48, 'edit_works', 'works', '2024-08-20 21:57:55', '2024-08-20 21:57:55'),
 (49, 'add_works', 'works', '2024-08-20 21:57:55', '2024-08-20 21:57:55'),
-(50, 'delete_works', 'works', '2024-08-20 21:57:55', '2024-08-20 21:57:55');
+(50, 'delete_works', 'works', '2024-08-20 21:57:55', '2024-08-20 21:57:55'),
+(51, 'browse_video_otchety', 'video_otchety', '2024-08-27 19:53:51', '2024-08-27 19:53:51'),
+(52, 'read_video_otchety', 'video_otchety', '2024-08-27 19:53:51', '2024-08-27 19:53:51'),
+(53, 'edit_video_otchety', 'video_otchety', '2024-08-27 19:53:51', '2024-08-27 19:53:51'),
+(54, 'add_video_otchety', 'video_otchety', '2024-08-27 19:53:51', '2024-08-27 19:53:51'),
+(55, 'delete_video_otchety', 'video_otchety', '2024-08-27 19:53:51', '2024-08-27 19:53:51'),
+(56, 'browse_video_otcheties', 'video_otcheties', '2024-08-27 19:59:13', '2024-08-27 19:59:13'),
+(57, 'read_video_otcheties', 'video_otcheties', '2024-08-27 19:59:13', '2024-08-27 19:59:13'),
+(58, 'edit_video_otcheties', 'video_otcheties', '2024-08-27 19:59:13', '2024-08-27 19:59:13'),
+(59, 'add_video_otcheties', 'video_otcheties', '2024-08-27 19:59:13', '2024-08-27 19:59:13'),
+(60, 'delete_video_otcheties', 'video_otcheties', '2024-08-27 19:59:13', '2024-08-27 19:59:13'),
+(86, 'browse_blogs', 'blogs', '2024-08-27 21:58:01', '2024-08-27 21:58:01'),
+(87, 'read_blogs', 'blogs', '2024-08-27 21:58:01', '2024-08-27 21:58:01'),
+(88, 'edit_blogs', 'blogs', '2024-08-27 21:58:01', '2024-08-27 21:58:01'),
+(89, 'add_blogs', 'blogs', '2024-08-27 21:58:01', '2024-08-27 21:58:01'),
+(90, 'delete_blogs', 'blogs', '2024-08-27 21:58:01', '2024-08-27 21:58:01'),
+(96, 'browse_blog_about_designs', 'blog_about_designs', '2024-08-27 23:02:26', '2024-08-27 23:02:26'),
+(97, 'read_blog_about_designs', 'blog_about_designs', '2024-08-27 23:02:26', '2024-08-27 23:02:26'),
+(98, 'edit_blog_about_designs', 'blog_about_designs', '2024-08-27 23:02:26', '2024-08-27 23:02:26'),
+(99, 'add_blog_about_designs', 'blog_about_designs', '2024-08-27 23:02:26', '2024-08-27 23:02:26'),
+(100, 'delete_blog_about_designs', 'blog_about_designs', '2024-08-27 23:02:26', '2024-08-27 23:02:26');
 
 -- --------------------------------------------------------
 
@@ -514,7 +635,27 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (47, 1),
 (48, 1),
 (49, 1),
-(50, 1);
+(50, 1),
+(51, 1),
+(52, 1),
+(53, 1),
+(54, 1),
+(55, 1),
+(56, 1),
+(57, 1),
+(58, 1),
+(59, 1),
+(60, 1),
+(86, 1),
+(87, 1),
+(88, 1),
+(89, 1),
+(90, 1),
+(96, 1),
+(97, 1),
+(98, 1),
+(99, 1),
+(100, 1);
 
 -- --------------------------------------------------------
 
@@ -719,6 +860,60 @@ CREATE TABLE `user_roles` (
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `video_otcheties`
+--
+
+CREATE TABLE `video_otcheties` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `adress` varchar(255) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `url_foto` varchar(255) DEFAULT NULL,
+  `url_design` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `url_video` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `video_otcheties`
+--
+
+INSERT INTO `video_otcheties` (`id`, `name`, `adress`, `description`, `url_foto`, `url_design`, `created_at`, `updated_at`, `url_video`) VALUES
+(2, 'Ремонт ванной комнаты и туалета с перепланировкой', 'Произвели отделку раздельного санузла с перепланировкой по адресу 60 лет образования СССР 20.', 'Общая площадь 5,4 м2. Заказчица пожелала увеличить ванную комнату, вариант объединения ванны с туалетом не рассматривался. Поэтому мы демонтировали перегородки санузла и кладовки и с помощью перегородок из ПГП и переноса коммуникации получили желаемый результат.', 'https://remontpodkluch24.ru/project/remont-vannoj-komnaty-i-tualeta-pod-klyuch-krasnoyarsk/', NULL, '2024-08-27 20:55:44', '2024-08-27 20:55:44', 'https://youtu.be/AmLi6bx1Gqo'),
+(3, 'Перепланировка и ремонт санузла', 'Выполнили объединение ванной комнаты и туалета с последующей отделкой по адресу Львовская 35.', 'Площадь 4,7 м2. В связи с нарушением целостности перегородок сантехкабины. Мы возвели новую сантехническую кабину из ПГП, произвели сварочные и электромонтажные работы, уложили плитку и напольный керамогранит и установили санфаянс по окончанию ремонтных работ.', 'https://remontpodkluch24.ru/project/remont-sovmeshhennogo-sanuzla-s-pereplanirovkoj/', NULL, '2024-08-27 21:00:50', '2024-08-27 21:00:50', 'https://youtu.be/ObgJrV_OPAY'),
+(4, 'Ремонт вторичного жилья под ключ', 'Выполнен капитальный ремонт в однокомнатной квартире по адресу Ломоносова 98.', 'Площадь 35,4 м2. Мы демонтировали деревянный пол, зачистили стены и выровняли поверхности. Произвели электротехнические и сварочные мероприятия. И сделали чистовую отделку.', 'https://remontpodkluch24.ru/project/kapitalnyj-remont-odnokomnatnoj-kvartiry-v-krasnoyarske/', NULL, '2024-08-27 21:01:56', '2024-08-27 21:01:56', 'https://youtu.be/HnzZ-_PK-V8'),
+(5, 'Бюджетная отделка квартиры', 'Завершили косметический ремонт квартиры по адресу 6-я Полярная 2 «А».', 'Площадь 44,3 м2. Выравнивать поверхности нам не потребовалось, мы только на 1 слой отшпаклевали стены и поклеили обои, уложили напольное покрытие и напольный плинтус. Отделка санузла под ключ. Отделка балкона.', 'https://remontpodkluch24.ru/project/byudzhetnyj-remont-kvartiry-v-novostrojke/', NULL, '2024-08-27 21:02:23', '2024-08-27 21:02:23', 'https://youtu.be/0HvwSxlCO2M'),
+(6, 'Капитальный ремонт в однокомнатной квартире', 'Закончили бюджетный ремонт в однокомнатной квартире по адресу Дубровинского 58.', 'Площадь жилья 32,8 м2. Потребовалось произвести капитальный ремонт в хрущевке. Выполнили сантехнические, электромонтажные и отделочные работы. Выполнили отделку ванны и туалета.', 'https://remontpodkluch24.ru/project/remont-hrushhevki-pod-klyuch/', NULL, '2024-08-27 21:02:53', '2024-08-27 21:02:53', 'https://youtu.be/l6QHhbTwGqI'),
+(7, 'Ремонт однокомнатной квартиры в Свердловском районе', 'Произвели ремонтные мероприятия в 1 комнатной квартире в новостройке по адресу Лесников 25.', 'Площадь 38,3 м2. Заказчица купила квартиру уже с готовой чистовой отделкой, которую пожелала переделать. После демонтажных работ, подготовили поверхности, наклеили обои и уложили линолеум. В санузле уложили керамогранит и установили сантехнику. В гостиной на стене наклеили панно с цветочным принтом и декорировали молдингами.', 'https://remontpodkluch24.ru/project/kompleksnyj-remont-odnokomnatnoj-kvartiry-v-krasnoyarske/', NULL, '2024-08-27 21:03:24', '2024-08-27 21:03:24', 'https://youtu.be/ZLk7c29xJ_A'),
+(8, 'Ремонт квартиры новой планировки Красноярск', 'Завершили ремонтные работы в двухкомнатной квартиры по адресу Годенко 6.', 'Площадь 65,3 м2. Помимо отделочных работ, Клиенты пожелали внести несколько акцентов при помощи декоративных элементов. После выравнивания поверхностей, мы наклеили обои, уложили кварцвинил и керамогранит на пол. На кухне по эскизу сделали зеркальную мозаику, а в коридоре вокруг дверных проемов выложили декоративный кирпич.', 'https://remontpodkluch24.ru/project/remont-dvuhkomnatnoj-kvartiry-pod-klyuch/', NULL, '2024-08-27 21:03:48', '2024-08-27 21:03:48', 'https://youtu.be/WpB4Th_iPmQ'),
+(9, 'Дизайнерский ремонт в санузле', 'Выполнили ремонтные мероприятия в совмещенном санузле по адресу Весны 30.', 'Площадь 7,8 м2. К нам обратились с проблемой в санузле, которую невозможно диагностировать без проведения демонтажных работ. В процессе определили проблему и в то время пока мы ее устраняли, был разработан дизайн проект и заказан крупноформатный керамогранит и сантехника. Результат превзошел все ожидания.', 'https://remontpodkluch24.ru/project/remont-sovmeshchennogo-sanuzla-po-dizajn-proektu/', NULL, '2024-08-27 21:04:13', '2024-08-27 21:04:13', 'https://youtu.be/ngDqNpcZGfM'),
+(10, 'Капитальный ремонт в двухкомнатной квартире', 'Завершили ремонт вторичного жилья по адресу Красной Армии 9/11.', 'Площадь 55,6. Квартира нуждалась в проведении капитального ремонта. Помимо отделочных работ, мы выполнили замену электрики и сантехники. Отремонтировали ванную и туалетную комнату. Установили межкомнатные двери. В кухне вместо обоев Заказчица пожелала отделку стен декоративной штукатуркой «матовый шелк».', 'https://remontpodkluch24.ru/project/remont-v-hruchevke/', NULL, '2024-08-27 21:04:45', '2024-08-27 21:04:45', 'https://youtu.be/T58s4NFpMYw'),
+(11, 'Ремонт квартиры в городе Красноярске', 'Завершили ремонт 2-комнатной квартиры в новостройке по адресу Норильская 3.', 'Площадь 57,9 м2. Обращаясь в нашу компанию по ремонту, Заказчик заранее распланировал, что хочет получить в результате. После выравнивания поверхностей по маякам, мы возвели короба, чтобы закрыть трубы и радиаторы отопления. Отремонтировали ванную и туалетную комнату.', 'https://remontpodkluch24.ru/project/kompleksnyj-remont-kvartiry-v-krasnoyarske/', NULL, '2024-08-27 21:05:15', '2024-08-27 21:05:15', 'https://youtu.be/WpB4Th_iPmQ'),
+(12, 'Ремонт квартиры в Красноярске под ключ', 'Завершили ремонтно-отделочные мероприятия в квартире по адресу Лесников 25.', 'Площадь 46 м2. Главным пожеланием было переделать стены от Застройщика. Поэтому мы оштукатурили стены и потолки и применили армирование сеткой строби, чтобы в дальнейшем избежать появление трещин. По завершению черновой отделки, выполнили наклейку обоев, уложили ламинат, покрасили потолок и наклеили потолочные багеты. Выполнена комплексная отделка совмещенного санузла.', 'https://remontpodkluch24.ru/project/kompleksnyj-remont-kvartiry/', NULL, '2024-08-27 21:05:37', '2024-08-27 21:05:37', 'https://youtu.be/05Idyzeoj50'),
+(13, 'Ремонт двухкомнатной квартиры', 'Выполнили ремонт вторичной квартиры по адресу Копылова 48.', 'Общая площадь 49 м2. В квартире выполнялся капитальный ремонт, в процессе работы мы столкнулись с проблемами с электропроводкой, которая от соседей проходила в данной квартире. Не смотря на это, ремонт выполнен качественно и в срок.', 'https://remontpodkluch24.ru/project/remont-kvartiry-pod-klyuch/', NULL, '2024-08-27 21:06:07', '2024-08-27 21:06:07', 'https://youtu.be/A3Rn9Qlq8I4'),
+(14, 'Ремонт трехкомнатной квартиры', 'Завершили ремонт по адресу Весны 34.', 'Площадь квартиры 106,5 м2. В момент осмотра квартиры, обнаружились повреждения текущей штукатурки, что повлекло повреждения обоев по швам. Так как дом отстоял 2 года, мы предложили сделать полный демонтаж и зачистку. Выполнили полноценный ремонт с укреплением стен армировочной сеткой.', 'https://remontpodkluch24.ru/project/remont-kvartiry-v-krasnoyarske/', NULL, '2024-08-27 21:06:28', '2024-08-27 21:06:28', 'https://youtu.be/swTzO_FoGaU'),
+(15, 'Ремонт однокомнатной квартиры', 'Завершили ремонт по адресу Песочная 10.', 'Площадь жилья 34 м2. Нам предстояло выполнить перепланировку в квартире и сделать из однокомнатной квартиры просторную квартиру студию.', 'https://remontpodkluch24.ru/project/kapitalnyj-remont-odnokomnatnoj-kvartiry/', NULL, '2024-08-27 21:06:55', '2024-08-27 21:06:55', 'https://youtu.be/fKs2bB11Zn4'),
+(16, 'Частичный ремонт квартиры в новостройке', 'Выполнена отделка раздельного санузла и кухни по адресу Партизана Железняка 61.', 'Общая площадь 14,7 м2. У Заказчицы был готов дизайн интерьера квартиры, согласно которому мы выполняли ремонтно-отделочные работы. Первоначальны мы отремонтировали кухню, а через полтора года произвели отделку раздельного санузла крупноформатным дизайнерским керамогранитом.', 'https://remontpodkluch24.ru/remont-kuhni/', NULL, '2024-08-27 21:07:25', '2024-08-27 21:07:25', 'https://youtu.be/A3Rn9Qlq8I4'),
+(17, 'Дизайнерский ремонт двухкомнатной квартиры', 'Завершили ремонт евродвушки согласно дизайн проекту по адресу Партизана Железняка 48 «Ж».', 'Площадь квартиры 65 м2. Проект подразумевал перепланировку: перенос совмещенного санузла из спальни в гардеробную, что позволит увеличить пространство спальни. В результате ремонтных мероприятий, мы полностью реализовали задуманное.', 'https://remontpodkluch24.ru/project/remont-kvartiry-po-dizajn-proektu/', NULL, '2024-08-27 21:07:52', '2024-08-27 21:07:52', 'https://youtu.be/swTzO_FoGaU'),
+(18, 'Ремонт в двухкомнатной квартире в Красноярске', 'Выполнили ремонт в квартире под ключ по адресу Быковского 5 «Д».', 'Площадь жилья 53,1 м2. Изначально предстоял частичный комплекс ремонтных работ, но немного времени спустя Заказчики пожелали ремонтировать всю квартиру. В результате нами проведен комплекс ремонтно-отделочных мероприятий в раздельном санузле, спальне, кухни гостиной и прихожей.', 'https://remontpodkluch24.ru/project/remont-pod-klyuch-53-m-kv/', NULL, '2024-08-27 21:08:16', '2024-08-27 21:08:16', 'https://youtu.be/5dQO4vcSjlU'),
+(19, 'Дизайнерский ремонт однокомнатной квартиры', 'Закончили ремонт в однокомнатной квартире по адресу Петра Подзолкова 21. Площадь квартиры 36,4 м2.', 'Еще заблаговременно до начала ремонта, Заказчик разработал дизайн проект своей квартиры, которую мы реализовали. Сначала выполнили подготовку и выравнивание поверхностей, сделали окрашивание и нанесли декоративную штукатурку по стенам, уложили ламинат и плинтус под покраску. Отделали санузел керамогранитом.', 'https://remontpodkluch24.ru/project/remont-odnokomnatnoj-kvartiry-pod-klyuch/', NULL, '2024-08-27 21:08:58', '2024-08-27 21:08:58', 'https://youtu.be/CAWUEPnChx0'),
+(20, 'Комплексный ремонт двухкомнатной квартиры', 'Завершили ремонт 2 комнатной квартиры по адресу Караульная 40.', 'Площадь квартиры 56,7 м2. В процессе демонтажа разобрали сантехкабину для дальнейшего объединения ванны и туалета. Выполнили подготовку и черновой этап, оклеили стены флизелиновыми обоями, уложили кварцвинил и пластиковый плинтус, монтировали матовое потолочное полотно. Подключили розетки, осветительные приборы и выключатели. Отремонтировали балкон.', 'https://remontpodkluch24.ru/project/remont-dvuhkomnatnoj-kvartiry-566-kv-m/', NULL, '2024-08-27 21:09:27', '2024-08-27 21:09:27', 'https://youtu.be/FA7zO24OMT4'),
+(21, 'Капитальный ремонт квартиры под ключ', 'Завершили отделку вторичной 3 комнатной квартиры по адресу 2-я Ботаническая 2.', 'Площадь квартиры 78,1 м2. В процессе демонтажных мероприятий объединили гостиную и коридор, выполнили подготовку, выравнивание поверхностей с помощью стяжки и штукатурных составов, поклеили обои, застелили напольный ламинат по всей квартире одним ковром. Оказали услугу по комплектации чистовыми материалами.', 'https://remontpodkluch24.ru/project/remont-trehkomnatnoj-kvartiry-78-m-kv/', NULL, '2024-08-27 21:09:49', '2024-08-27 21:09:49', 'https://youtu.be/QKUujzkw43g'),
+(22, 'Отделка санузла по дизайн проекту', 'Произвели дизайнерский ремонт в санузле по адресу Апрельская 5 «Б».', 'Площадь санузла 6,7 м2. Планировка была не стандартная, поэтому Заказчики заказали дизайн интерьера. Проектная документация предполагала перемену расположения санфаянса, для этого мы собрали трубы канализации и перепаяли подводку воды, уложили керамогранит, подключили сантехнику и натянули потолочное полотно.', 'https://remontpodkluch24.ru/project/remont-sovmeshhennogo-sanuzla-56-kv-m/', NULL, '2024-08-27 21:10:00', '2024-08-27 21:18:57', 'https://youtu.be/XC63UHtRhtE'),
+(23, 'Капитальный ремонт трехкомнатной квартиры в Красноярске', 'Выполнили ремонт трехкомнатной квартиры по адресу Яковлева 1\"А.', 'Площадь квартиры 66,7 м2. Наша компания приступила к ремонтным работам, после других специалистов, в связи с нарушением технологии оштукатуривания, мы вынуждены были полностью все демонтировать. После подготовки оснований, мы выровняли поверхности, уложили замковой кварцвинил, наклеили обои, монтировали натяжной потолок. Отремонтировали раздельный санузел и балкон.', NULL, NULL, '2024-08-27 21:10:00', '2024-08-27 21:18:12', 'https://youtu.be/ILQUTD8aSlQ'),
+(24, 'Капитальный ремонт трехкомнатной квартиры в Красноярске', 'Выполнили ремонт трехкомнатной квартиры по адресу Яковлева 1\"А\".', 'Площадь квартиры 66,7 м2. Наша компания приступила к ремонтным работам, после других специалистов, в связи с нарушением технологии оштукатуривания, мы вынуждены были полностью все демонтировать. После подготовки оснований, мы выровняли поверхности, уложили замковой кварцвинил, наклеили обои, монтировали натяжной потолок. Отремонтировали раздельный санузел и балкон.', 'https://remontpodkluch24.ru/project/remont-trehkomnatnoj-kvartiry-66-kv-m/', NULL, '2024-08-27 21:11:00', '2024-08-27 21:11:16', 'https://youtu.be/ILQUTD8aSlQ'),
+(25, 'Ремонт спальни под ключ', 'Завершили ремонт спальни по адресу Железнодорожников 12.', 'Площадь комнаты 9 м2. Комплекс ремонтных мероприятий включал: замену стояка и радиатора отопления, демонтажные работы и зачистку, замену проводки, выравнивание поверхностей, монтаж нового подоконника, откосов и уголков. Покрасили стены и постелили линолеум, подключили осветительные приборы, розетки и выключатели.', 'https://remontpodkluch24.ru/remont-spalni/', NULL, '2024-08-27 21:11:44', '2024-08-27 21:11:44', 'https://youtu.be/jnFyIT2m76A'),
+(26, 'Комплексный ремонт квартиры в новостройке', 'Выполнили отделку трехкомнатной квартиры в микрорайоне Пашенный, по адресу Ярыгинская набережная 13А.', 'Площадь квартиры 95 м2. Произвели перепланировку в квартире: совместили лоджию с гостиной, а в дальней комнате возвели перегородки под будущую гардеробную. Во всей квартире выровняли стены и поклеили обои, уложили клеевой кварц винил одним полотном, монтировали натяжной потолок, поставили 5 дверей. В двух санузлах сделана отделка под ключ.', 'https://remontpodkluch24.ru/project/remont-v-trehkomnatnoj-kvartire-945-pod-klyuch/', NULL, '2024-08-27 21:12:36', '2024-08-27 21:12:36', 'https://youtu.be/YIpWPfV4A8g'),
+(27, 'Ремонт трехкомнатной квартиры в ЖК Преображенский', 'Выполнили ремонт в трехкомнатной квартире, по адресу Петра Подзолкова 4.', 'Площадь квартиры 82,6 м2.   Современный ремонт в в квартире новой планировки. Монтаж натяжного потолка, оклейка стен обоями, укладка кварцвиниловой плитки на пол. Отделка ванной комнаты и туалета под ключ.', 'https://remontpodkluch24.ru/project/remont-trehkomnatnoj-kvartiry-826-kv-m/', NULL, '2024-08-27 21:13:03', '2024-08-27 21:13:03', 'https://youtu.be/E1tPx1SqSWM'),
+(28, 'Ремонт однокомнатной квартиры в ЖК Бизнес-квартал', 'Выполнили ремонт в однокомнатной квартире в Новостройке, по адресу Бограда, 111.', 'Площадь квартиры 44,81 м2. Произвели демонтаж отделки от застройщика, выровняли и подготовили поверхности согласно технологий, завершили ремонт чистовой отделкой под ключ.', 'https://remontpodkluch24.ru/project/remont-odnokomnatnoj-kvartiry-v-novostrojke-44-81-m-kv/', NULL, '2024-08-27 21:13:34', '2024-08-27 21:13:34', 'https://youtu.be/9EOynMJA384'),
+(29, 'Ремонт трехкомнатной квартиры в ЖК Притяжение', 'Выполнили ремонт трехкомнатной квартиры в новостройке, по адресу 78 Добровольческой Бригады, 25.', 'Площадь квартиры 97,7 м2. Подготовили и частично выровняли поверхности, выполнили финишную отделку, отремонтировали совмещенный санузел и туалетную комнату под ключ.', 'https://remontpodkluch24.ru/project/remont-trekhkomnatnoj-kvartiry-97-7-kv-m/', NULL, '2024-08-27 21:14:31', '2024-08-27 21:14:31', 'https://youtu.be/rXUDM2jv8Cs'),
+(30, 'Ремонт однокомнатной квартиры', 'Выполнили ремонт вторичной однокомнатной квартиры, по адресу Свободный Проспект, 36.', 'Площадь квартиры 31,2 м2. Капитальный ремонт под ключ. Подготовили поверхности, заменили смежную перегородку с соседями. Произвели финишную отделку.', 'https://remontpodkluch24.ru/project/byudzhetnyj-remont-v-odnokomnatnoj-kvartire-31-2-m-kv/', NULL, '2024-08-27 21:15:11', '2024-08-27 21:15:11', 'https://youtu.be/EvXpmk5xF0c'),
+(31, 'Ремонт четырехкомнатной квартиры', 'Произвели ремонт четырехкомнатной квартиры, по адресу Весны, 9.', 'Площадь квартиры 84 м2. Выполнили капитальный ремонт согласно дизайн-проекту. Сделали полный демонтаж, выровняли поверхности, заменили электрику и сантехнику, выполнили чистовую отделку.', 'https://remontpodkluch24.ru/project/dizajnerskij-remont-chetyrekhkomnatnoj-kvartiry-84-m-kv/?preview_id=12137&preview_nonce=1fe9883488&preview=true', 'https://remontpodkluch24.ru/project/dizajnerskij-proekt-chetyrekhkomnatnoj-kvartiry-84-m2/', '2024-08-27 21:15:48', '2024-08-27 21:15:48', 'https://youtu.be/8d55NMXMUkg');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `works`
 --
 
@@ -746,6 +941,18 @@ INSERT INTO `works` (`id`, `title`, `adres`, `image`, `url`, `created_at`, `upda
 --
 -- Индексы сохранённых таблиц
 --
+
+--
+-- Индексы таблицы `blogs`
+--
+ALTER TABLE `blogs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `blog_about_designs`
+--
+ALTER TABLE `blog_about_designs`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `categories`
@@ -878,6 +1085,12 @@ ALTER TABLE `user_roles`
   ADD KEY `user_roles_role_id_index` (`role_id`);
 
 --
+-- Индексы таблицы `video_otcheties`
+--
+ALTER TABLE `video_otcheties`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `works`
 --
 ALTER TABLE `works`
@@ -886,6 +1099,18 @@ ALTER TABLE `works`
 --
 -- AUTO_INCREMENT для сохранённых таблиц
 --
+
+--
+-- AUTO_INCREMENT для таблицы `blogs`
+--
+ALTER TABLE `blogs`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT для таблицы `blog_about_designs`
+--
+ALTER TABLE `blog_about_designs`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `categories`
@@ -897,13 +1122,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT для таблицы `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
 
 --
 -- AUTO_INCREMENT для таблицы `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT для таблицы `failed_jobs`
@@ -921,7 +1146,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT для таблицы `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT для таблицы `migrations`
@@ -933,13 +1158,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT для таблицы `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 
 --
 -- AUTO_INCREMENT для таблицы `personal_access_tokens`
@@ -976,6 +1201,12 @@ ALTER TABLE `translations`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT для таблицы `video_otcheties`
+--
+ALTER TABLE `video_otcheties`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT для таблицы `works`

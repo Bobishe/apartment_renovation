@@ -8,6 +8,9 @@ use App\Http\Controllers\CallbackController;
 
 use App\Models\Page;
 use App\Models\Work;
+use App\Models\VideoOtchety;
+use App\Models\Blog;
+use App\Models\blog_about_designs;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,7 +60,29 @@ Route::get('/{slug}', function ($slug) {
     if ($slug == 'vopros-otvet' || $slug == 'kontakty') {
         return view('page/index', compact('page', 'works'));
     }
-
+    if ($slug == 'video-otchety-o-prodelannoj-rabote') {
+        $works = VideoOtchety::latest()->get();
+        return view('page/video-otchety', compact(
+            'page',
+            'works'
+        ));
+    }
+    if ($slug == 'blog') {
+        $works = Blog::latest()->get();
+        return view('page/blog', compact(
+            'page',
+            'works'
+        ));
+    }
+    if ($slug == 'o-dizajne') {
+        $works = blog_about_designs::latest()->get();
+        return view('page/o-dizajne', compact(
+            'page',
+            'works'
+        ));
+    }
+    
+    
 
     $roomSlugs = [
         'studio_apartment',

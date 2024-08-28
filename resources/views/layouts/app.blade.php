@@ -117,7 +117,7 @@
                         <a class="nav-link" href="/project">Фото отчеты</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/photo-reports">Видео отчеты</a>
+                        <a class="nav-link" href="/video-otchety-o-prodelannoj-rabote">Видео отчеты</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
@@ -223,8 +223,8 @@
                             Полезная информация ▾
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item      " href="/team">Статьи о ремонте</a></li>
-                            <li><a class="dropdown-item " href="/team">Статьи про дизайн интерьера</a></li>
+                            <li><a class="dropdown-item      " href="/blog">Статьи о ремонте</a></li>
+                            <li><a class="dropdown-item " href="/o-dizajne">Статьи про дизайн интерьера</a></li>
                             <li><a class="dropdown-item " href="/vopros-otvet">Вопрос ответ</a></li>
                         </ul>
                     </li>
